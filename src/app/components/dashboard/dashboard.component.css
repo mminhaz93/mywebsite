@@ -1,7 +1,7 @@
 .rounded-circle {
   width: 100px;
   height: 100px;
-  color: red;
+  padding-top: 5px;
 }
 
 .row {
@@ -9,20 +9,26 @@
 }
 
 .project {
+  padding: 0px;
   text-align: center;
-  padding: 20px 5px 22px;
+  /* padding: 20px 0px 22px 0px; */
   font-size: 11px;
   font-weight: 200;
   display: inline-block;
-  background-color: aliceblue;
-  height: 207px;
-  width: 233px;
   cursor: pointer;
   opacity: 0.95;
   border-radius: 0rem;
+  margin-bottom: 10px;
+}
+
+.project:hover{
+  box-shadow: 0 7px 9px 0 rgba(0, 0, 0, 0.6), 0 8px 10px 0 rgba(0, 0, 0, 0.29);
 }
 
 .project-title {
+  /* color: #FFFF; */
+  color: #BD4B47;
+  background-color: black;
   font-size: 24px;
   font-weight: 200;
   letter-spacing: -0.24px;
@@ -32,12 +38,25 @@
   line-height: 32px;
 }
 
+.project-title:hover{
+  background-color: #BD4B47;
+  color: #FFFF;
+}
+
 .quickViewBtn {
-  margin-top: 5px;
+  border-radius: 25px;
   font-size: 15px;
   font-weight: 200;
   letter-spacing: -0.24px;
   word-spacing: 0px;
-  text-decoration: none solid rgb(51, 51, 51);
+  color: #BD4B47;
   line-height: 20px;
+  vertical-align: middle;
+  margin-bottom: 5px;
+  background-color: black;
+}
+
+.quickViewBtn:hover{
+  background-color: #BD4B47;
+  color: #FFFF;
 }

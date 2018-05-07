@@ -5,3 +5,14 @@ input.ng-valid.ng-dirty{
 button:hover, a.btn:hover{
     cursor: pointer;
 }
+
+.btn{
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 200;
+    letter-spacing: -0.24px;
+    word-spacing: 0px;
+    /* text-decoration: none solid rgb(51, 51, 51); */
+    line-height: 20px;
+    vertical-align: middle;
+}
