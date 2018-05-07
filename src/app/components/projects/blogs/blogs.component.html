@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Title</th>
+          <th scope="col">Body</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let post of postsData">
+          <th scope="row">{{post.id}}</th>
+          <td>{{post.title}}</td>
+          <td>{{post.body}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

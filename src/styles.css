@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  background-image: url("assets/images/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 40em !important;
+  background-size: cover;
+  width: auto;
+  /* overflow: hidden; */
+  /* Cancels background scroll */
+}
+
+.container{
+  background-color: aliceblue;
+}

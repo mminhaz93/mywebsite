@@ -1,0 +1,38 @@
+<form #employeeForm="ngForm" (ngSubmit)="onSubmit(employeeForm)">
+  <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="employeeService.selectedEmployee.$key">
+  <!-- Name -->
+  <div class="form-group">
+    <label>Name</label>
+    <input class="form-control" name="name" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.name" placeholder="Full Name">
+  </div>
+  <!-- Position -->
+  <div class="form-group">
+    <label>Position</label>
+    <input class="form-control" name="position" #position="ngModel" [(ngModel)]="employeeService.selectedEmployee.position" placeholder="Position">
+  </div>
+  <!-- Office -->
+  <div class="form-group">
+    <label>Office</label>
+  
+    <input class="form-control" name="office" #office="ngModel" [(ngModel)]="employeeService.selectedEmployee.office" placeholder="Office">
+  </div>
+  <!-- Salary -->
+    <div>
+      <label>Salary</label>
+      <div class="input-group mb-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text"> <i class="fa fa-dollar"></i>  </div>
+        </div>
+        <input class="form-control" name="salary" #salary="ngModel" [(ngModel)]="employeeService.selectedEmployee.salary" placeholder="Salary">
+      </div>
+    </div>
+    <!-- Button -->
+    <div class="form-group">
+      <button class="btn btn-primary" type="sucess">
+        <i class="fa fa-floppy-o"></i>
+        Submit</button>
+      <button class="btn btn-danger" type="button" (click)="resetForm(employeeForm)">
+        <i class="fa fa-repeat"></i>
+        Reset</button>
+    </div>
+</form>
