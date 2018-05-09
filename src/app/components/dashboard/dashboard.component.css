@@ -38,6 +38,11 @@
   line-height: 32px;
 }
 
+.project-title:hover {
+  color: #FFFF;
+  background-color: #BD4B47;
+}
+
 .quickViewBtn {
   border-radius: 25px;
   font-size: 15px;
