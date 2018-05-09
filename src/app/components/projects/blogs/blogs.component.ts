@@ -10,6 +10,9 @@ import { DataService } from '../../../services/data.service';
 export class BlogsComponent implements OnInit {
   postsData: Post[];
 
+  sortType  = 'name';
+  sortReverse  = false
+
   constructor(private apiSerivce: DataService) { }
 
   ngOnInit(): void {

@@ -1,0 +1,20 @@
+#searchForm {
+    margin-right: 100px;
+  }
+  @media (max-width: 1200px) {
+    #searchForm {
+      display: none;
+    }
+  }
+  .filterBy {
+    margin-bottom: 10px;
+    margin-left: 5px;
+  }
+
+  .btn{
+      margin-right: 1rem;
+  }
+
+  .table-responsive{
+    margin-top: 10px;
+  }

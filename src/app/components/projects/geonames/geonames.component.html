@@ -1,0 +1,62 @@
+<div class="container">
+  <h4>Geonames</h4>
+  <div class="table-responsive" *ngIf="countries">
+    <div class="row filterBy">
+      <button class="btn btn-secondary" [class.active]="filterBy==='all'" (click)="filterBy('all')">
+        All Countries
+      </button>
+      <button class="btn btn-secondary" [class.active]="filterBy==='europe'" (click)="filterBy('europe')">
+        European Countries
+      </button>
+      <button class="btn btn-secondary" [class.active]="filterBy==='pop'" (click)="filterBy('pop')">
+        Population > 1M
+      </button>
+      <button class="btn btn-secondary" (click)="sortType('name')">
+        Sort by Name
+      </button>
+      <button class="btn btn-secondary" (click)="sortType('pop')">
+        Sort by Population
+      </button>
+    </div>
+    <table class="table table-bordered table-striped table-hover table-fixed-header">
+      <thead class="header">
+        <tr>
+          <th class="text-center">
+            Name
+          </th>
+          <th class="text-center">
+            Country Code
+          </th>
+          <th class="text-center">
+            Capital
+          </th>
+          <th class="text-center">
+            Area (km2)
+          </th>
+          <th class="text-center" class="text-center" (click)="sortType('pop', up)">
+            Population
+            <span *ngIf="this.sortDirection === 'desc'">
+                <i class="fa fa-arrow-up"></i>
+            </span>
+            <span *ngIf="this.sortDirection === 'asc'">
+                <i class="fa fa-arrow-down"></i>
+            </span>
+           
+          </th>
+          <th class="text-center">
+            Continent </th>
+        </tr>
+      </thead>
+      <tbody class="searchable">
+        <tr *ngFor="let country of countries ">
+          <td>{{ country.countryName }}</td>
+          <td>{{ country.countryCode }}</td>
+          <td>{{ country.capital }}</td>
+          <td>{{ country.areaInSqKm | number:0 }}</td>
+          <td>{{ country.population | number:0 }}</td>
+          <td>{{ country.continentName }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
