@@ -31,6 +31,10 @@ import { environment } from '../environments/environment';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { Employee } from './model/employee.model';
 import { BackToDashBoardComponent } from './components/back-to-dash-board/back-to-dash-board.component';
+import { LineChartComponent } from './components/projects/charts/line-chart/line-chart.component';
+import { TopoChartComponent } from './components/projects/charts/topo-chart/topo-chart.component';
+import { ChartService } from './services/chart.service';
+import { ChartsComponent } from './components/projects/charts/charts/charts.component';
 
 // Routes
 const appRoutes: Routes = [
@@ -40,7 +44,7 @@ const appRoutes: Routes = [
   { path: 'quotes', component: BlogsComponent },
   // {path:'qa', component:},
   // {path:'events', component:},
-  //{path:'charts', component:}
+  { path: 'charts', component: ChartsComponent },
   // {path:'add-client', component:AddClientComponent, canActivate:[AuthGuard]},
   { path: 'project/:id', component: SideBarComponent },
   // {path:'edit-client/:id', component:EditClientComponent, canActivate:[AuthGuard]},
@@ -59,7 +63,10 @@ const appRoutes: Routes = [
     EmployeesComponent,
     BlogsComponent,
     PageNotFoundComponent,
-    BackToDashBoardComponent
+    BackToDashBoardComponent,
+    LineChartComponent,
+    TopoChartComponent,
+    ChartsComponent
 
   ],
   imports: [
@@ -81,6 +88,7 @@ const appRoutes: Routes = [
     ProjectService,
     DataService,
     TodoService,
+    ChartService,
     EmployeeService],
   bootstrap: [AppComponent]
 })
