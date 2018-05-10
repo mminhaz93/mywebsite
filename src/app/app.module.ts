@@ -35,6 +35,9 @@ import { LineChartComponent } from './components/projects/charts/line-chart/line
 import { TopoChartComponent } from './components/projects/charts/topo-chart/topo-chart.component';
 import { ChartService } from './services/chart.service';
 import { ChartsComponent } from './components/projects/charts/charts/charts.component';
+import { GeonamesComponent } from './components/projects/geonames/geonames.component';
+import { GeonameService } from './services/geoname.service';
+import { OrderByPipe } from './pipes/order-by.pipe';
 
 // Routes
 const appRoutes: Routes = [
@@ -42,6 +45,7 @@ const appRoutes: Routes = [
   { path: 'todo', component: TodoComponent },
   { path: 'employees', component: EmployeesComponent },
   { path: 'quotes', component: BlogsComponent },
+  { path: 'geonames', component: GeonamesComponent },
   // {path:'qa', component:},
   // {path:'events', component:},
   { path: 'charts', component: ChartsComponent },
@@ -66,12 +70,12 @@ const appRoutes: Routes = [
     BackToDashBoardComponent,
     LineChartComponent,
     TopoChartComponent,
-    ChartsComponent
-
+    ChartsComponent,
+    GeonamesComponent,
+    OrderByPipe
   ],
   imports: [
     BrowserModule,
-
     FormsModule,
     HttpModule,
     HttpClientModule,
@@ -89,7 +93,8 @@ const appRoutes: Routes = [
     DataService,
     TodoService,
     ChartService,
-    EmployeeService],
+    EmployeeService,
+    GeonameService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
