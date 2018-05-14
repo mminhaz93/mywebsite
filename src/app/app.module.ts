@@ -37,23 +37,30 @@ import { ChartService } from './services/chart.service';
 import { ChartsComponent } from './components/projects/charts/charts/charts.component';
 import { GeonamesComponent } from './components/projects/geonames/geonames.component';
 import { GeonameService } from './services/geoname.service';
+import { CategoryComponent } from './components/projects/category/category.component';
+import { CountryPipe } from './pipes/country.pipe';
+import { CategoryPipe } from './pipes/category.pipe';
 import { OrderByPipe } from './pipes/order-by.pipe';
+import { PaginationComponent } from './components/projects/pagination/pagination.component';
+import { PagerService } from './services/pager.service';
+
 
 // Routes
 const appRoutes: Routes = [
-  { path: '', component: DashboardComponent, },
+  { path: '', component:DashboardComponent},
   { path: 'todo', component: TodoComponent },
   { path: 'employees', component: EmployeesComponent },
-  { path: 'quotes', component: BlogsComponent },
+  { path: 'quotes', component: PaginationComponent },
   { path: 'geonames', component: GeonamesComponent },
-  // {path:'qa', component:},
-  // {path:'events', component:},
+  // {path:'dash', component:DashboardComponent},
+  // {path:'events', component: PaginationComponent},
   { path: 'charts', component: ChartsComponent },
   // {path:'add-client', component:AddClientComponent, canActivate:[AuthGuard]},
   { path: 'project/:id', component: SideBarComponent },
   // {path:'edit-client/:id', component:EditClientComponent, canActivate:[AuthGuard]},
   // {path:'settings', component:SettingsComponent, canActivate:[AuthGuard]},
-  { path: '**', component: PageNotFoundComponent }
+  { path: '**', component: PageNotFoundComponent },
+  
 ];
 @NgModule({
   declarations: [
@@ -72,7 +79,11 @@ const appRoutes: Routes = [
     TopoChartComponent,
     ChartsComponent,
     GeonamesComponent,
-    OrderByPipe
+    CountryPipe,
+    CategoryPipe,
+    OrderByPipe,
+    CategoryComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
@@ -94,7 +105,8 @@ const appRoutes: Routes = [
     TodoService,
     ChartService,
     EmployeeService,
-    GeonameService],
+    GeonameService,
+    PagerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

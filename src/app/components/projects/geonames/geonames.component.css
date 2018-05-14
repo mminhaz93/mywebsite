@@ -1,20 +1,26 @@
-#searchForm {
-    margin-right: 100px;
-  }
   @media (max-width: 1200px) {
     #searchForm {
       display: none;
     }
   }
+
   .filterBy {
     margin-bottom: 10px;
-    margin-left: 5px;
   }
 
-  .btn{
-      margin-right: 1rem;
+  .btn {
+    width: 155px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 200;
+    letter-spacing: -0.24px;
+    word-spacing: 0px;
+    color: #BD4B47;
+    line-height: 20px;
+    vertical-align: middle;
+    background-color: rgb(63, 62, 62);
   }
 
-  .table-responsive{
+  .table-responsive {
     margin-top: 10px;
   }

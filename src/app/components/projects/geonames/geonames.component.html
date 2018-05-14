@@ -1,50 +1,69 @@
+<br>
 <div class="container">
-  <h4>Geonames</h4>
   <div class="table-responsive" *ngIf="countries">
-    <div class="row filterBy">
-      <button class="btn btn-secondary" [class.active]="filterBy==='all'" (click)="filterBy('all')">
-        All Countries
-      </button>
-      <button class="btn btn-secondary" [class.active]="filterBy==='europe'" (click)="filterBy('europe')">
-        European Countries
-      </button>
-      <button class="btn btn-secondary" [class.active]="filterBy==='pop'" (click)="filterBy('pop')">
-        Population > 1M
-      </button>
-      <button class="btn btn-secondary" (click)="sortType('name')">
-        Sort by Name
-      </button>
-      <button class="btn btn-secondary" (click)="sortType('pop')">
-        Sort by Population
-      </button>
-    </div>
+      <div class="row filterBy">
+          <div class="col-md-2">
+            <input type="text" [(ngModel)]="searchText" class="form-control" placeholder="Search Country" />
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-secondary" [class.active]="filterBy==='all'" (click)="filterBy('all')">
+              All Countries
+            </button>
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-secondary" [class.active]="filterBy==='europe'" (click)="filterBy('europe')">
+              European Countries
+            </button>
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-secondary" [class.active]="filterBy==='pop'" (click)="filterBy('pop')">
+              Population > 1M
+            </button>
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-secondary" (click)="sort('countryName')">
+              Sort by Name
+            </button>
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-secondary" (click)="sort('population')">
+              Sort by Population
+            </button>
+          </div>
+        </div>
     <table class="table table-bordered table-striped table-hover table-fixed-header">
       <thead class="header">
         <tr>
-          <th class="text-center">
-            Name
+          <th class="pointer" (click)="sort('countryName')">Name
+            <i class="fa" [ngClass]="{'fa-sort': column != 'countryName', 
+                            'fa-sort-asc': (column == 'countryName' && !isDesc), 
+                            'fa-sort-desc': (column == 'countryName' && isDesc) }" aria-hidden="true"> </i>
           </th>
-          <th class="text-center">
-            Country Code
+          <th class="pointer" (click)="sort('countryCode')">Country Code
+            <i class="fa" [ngClass]="{'fa-sort': column != 'countryCode', 
+                            'fa-sort-asc': (column == 'countryCode' && !isDesc), 
+                            'fa-sort-desc': (column == 'countryCode' && isDesc) }" aria-hidden="true"> </i>
           </th>
-          <th class="text-center">
-            Capital
+          <th class="pointer" (click)="sort('capital')">Capital
+            <i class="fa" [ngClass]="{'fa-sort': column != 'capital', 
+                            'fa-sort-asc': (column == 'capital' && !isDesc), 
+                            'fa-sort-desc': (column == 'capital' && isDesc) }" aria-hidden="true"> </i>
           </th>
-          <th class="text-center">
-            Area (km2)
+          <th class="pointer" (click)="sort('areaInSqKm')"> Area (km2)
+            <i class="fa" [ngClass]="{'fa-sort': column != 'areaInSqKm', 
+                              'fa-sort-asc': (column == 'areaInSqKm' && !isDesc), 
+                              'fa-sort-desc': (column == 'areaInSqKm' && isDesc) }" aria-hidden="true"> </i>
           </th>
-          <th class="text-center" class="text-center" (click)="sortType('pop', up)">
-            Population
-            <span *ngIf="this.sortDirection === 'desc'">
-                <i class="fa fa-arrow-up"></i>
-            </span>
-            <span *ngIf="this.sortDirection === 'asc'">
-                <i class="fa fa-arrow-down"></i>
-            </span>
-           
+          <th class="pointer" (click)="sort('population')"> Population
+            <i class="fa" [ngClass]="{'fa-sort': column != 'population', 
+                              'fa-sort-asc': (column == 'population' && !isDesc), 
+                              'fa-sort-desc': (column == 'population' && isDesc) }" aria-hidden="true"> </i>
           </th>
-          <th class="text-center">
-            Continent </th>
+          <th class="pointer" (click)="sort('continentName')"> Continent
+            <i class="fa" [ngClass]="{'fa-sort': column != 'continentName', 
+                              'fa-sort-asc': (column == 'continentName' && !isDesc), 
+                              'fa-sort-desc': (column == 'continentName' && isDesc) }" aria-hidden="true"> </i>
+          </th>
         </tr>
       </thead>
       <tbody class="searchable">

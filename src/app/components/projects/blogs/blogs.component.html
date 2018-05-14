@@ -3,20 +3,25 @@
     <table class="table table-striped">
       <thead class="thead-dark">
         <tr>
-          <th scope="col">
-            ID
+          <th class="pointer" (click)="sort('id')">ID
+            <i class="fa" [ngClass]="{'fa-sort': column != 'id', 
+                                'fa-sort-asc': (column == 'id' && !isDesc), 
+                                'fa-sort-desc': (column == 'id' && isDesc) }" aria-hidden="true"> </i>
           </th>
-          <th scope="col">
-            <a href="#" (click)="sortType = 'name'">
-              Title
-              <span [hidden]="sortType == '!name'" class="fa fa-caret-down"></span>
-            </a>
+          <th class="pointer" (click)="sort('title')">Title
+            <i class="fa" [ngClass]="{'fa-sort': column != 'title', 
+                                'fa-sort-asc': (column == 'title' && !isDesc), 
+                                'fa-sort-desc': (column == 'title' && isDesc) }" aria-hidden="true"> </i>
           </th>
-          <th scope="col">Body</th>
+          <th class="pointer" (click)="sort('body')">Body
+            <i class="fa" [ngClass]="{'fa-sort': column != 'body', 
+                                'fa-sort-asc': (column == 'body' && !isDesc), 
+                                'fa-sort-desc': (column == 'body' && isDesc) }" aria-hidden="true"> </i>
+          </th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let post of postsData | slice:0:5; let i=index">
+        <tr *ngFor="let post of postsData | orderBy: {property: column, direction: direction}">
           <th scope="row">{{post.id}}</th>
           <td>{{post.title}}</td>
           <td>{{post.body}}</td>

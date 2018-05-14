@@ -7,17 +7,24 @@
 .nav-link {
   color: aliceblue !important;
   display: block;
-  padding: .5rem 1rem 1.3rem 1rem;
+  padding: .5rem 0rem .3rem 0rem;
   text-transform: uppercase;
   border-bottom: 2px solid transparent;
+  font-size: 1.2rem;
+  margin-right: 1rem;
 }
 
 .nav-link:hover {
   border-bottom: 2px solid #FFFF;
 }
 
-.nav-link.active {
+a.active-link {
   border-bottom: 2px solid #BD4B47;
+  color: #3f3e3e !important;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid #BD4B47; 
 }
 
 .title {

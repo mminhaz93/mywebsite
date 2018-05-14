@@ -9,21 +9,38 @@ import { DataService } from '../../../services/data.service';
 })
 export class BlogsComponent implements OnInit {
   postsData: Post[];
-
-  sortType  = 'name';
-  sortReverse  = false
+  isDesc: boolean = false;
+  column: string = 'id';
 
   constructor(private apiSerivce: DataService) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
     this.getPosts();
   }
 
-  getPosts(): void {
+  getPosts(){
     this.apiSerivce.getPosts().
       subscribe(
         posts => this.postsData = posts,
         error => console.log("Error :: " + error))
   }
+
+  sort(property){
+    this.isDesc = !this.isDesc; //change the direction    
+    this.column = property;
+    let direction = this.isDesc ? 1 : -1;
+
+    this.postsData.sort(function(a, b){
+        if(a[property] < b[property]){
+            return -1 * direction;
+        }
+        else if( a[property] > b[property]){
+            return 1 * direction;
+        }
+        else{
+            return 0;
+        }
+    });
+};
 
 }

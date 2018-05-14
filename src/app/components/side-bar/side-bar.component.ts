@@ -30,10 +30,10 @@ export class SideBarComponent {
 
   constructor(
     public projectService: ProjectService,
-
     public route: ActivatedRoute,
     public router: Router,
   ) {
+    
   }
 
   ngOnInit() {
