@@ -1,36 +1,36 @@
 <br>
 <div class="container">
   <div class="table-responsive" *ngIf="countries">
-      <div class="row filterBy">
-          <div class="col-md-2">
-            <input type="text" [(ngModel)]="searchText" class="form-control" placeholder="Search Country" />
-          </div>
-          <div class="col-md-2">
-            <button class="btn btn-secondary" [class.active]="filterBy==='all'" (click)="filterBy('all')">
-              All Countries
-            </button>
-          </div>
-          <div class="col-md-2">
-            <button class="btn btn-secondary" [class.active]="filterBy==='europe'" (click)="filterBy('europe')">
-              European Countries
-            </button>
-          </div>
-          <div class="col-md-2">
-            <button class="btn btn-secondary" [class.active]="filterBy==='pop'" (click)="filterBy('pop')">
-              Population > 1M
-            </button>
-          </div>
-          <div class="col-md-2">
-            <button class="btn btn-secondary" (click)="sort('countryName')">
-              Sort by Name
-            </button>
-          </div>
-          <div class="col-md-2">
-            <button class="btn btn-secondary" (click)="sort('population')">
-              Sort by Population
-            </button>
-          </div>
-        </div>
+    <div class="row filterBy">
+      <div class="col-md-2">
+        <input type="text" [(ngModel)]="searchText" class="form-control" placeholder="Search Country" />
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-secondary" [class.active]="filterBy==='all'" (click)="filterBy('all')">
+          All Countries
+        </button>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-secondary" [class.active]="filterBy==='europe'" (click)="filterBy('europe')">
+          European Countries
+        </button>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-secondary" [class.active]="filterBy==='pop'" (click)="filterBy('pop')">
+          Population > 1M
+        </button>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-secondary" (click)="sort('countryName')">
+          Sort by Name
+        </button>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-secondary" (click)="sort('population')">
+          Sort by Population
+        </button>
+      </div>
+    </div>
     <table class="table table-bordered table-striped table-hover table-fixed-header">
       <thead class="header">
         <tr>
@@ -67,7 +67,7 @@
         </tr>
       </thead>
       <tbody class="searchable">
-        <tr *ngFor="let country of countries ">
+        <tr *ngFor="let country of countries | country:searchText">
           <td>{{ country.countryName }}</td>
           <td>{{ country.countryCode }}</td>
           <td>{{ country.capital }}</td>
