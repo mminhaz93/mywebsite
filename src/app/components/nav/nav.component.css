@@ -19,8 +19,8 @@
 }
 
 a.active-link {
-  border-bottom: 2px solid #BD4B47;
-  color: #3f3e3e !important;
+  border-bottom: 2px solid #3f3e3e ;
+  color: #a71f15 !important;
 }
 
 .nav-link.active {
@@ -44,5 +44,5 @@ a.active-link {
 }
 
 .fa-bullseye {
-  color: #BD4B47;
+  color: #a71f15 ;
 }
