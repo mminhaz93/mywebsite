@@ -1,5 +1,5 @@
 :host {
-  background: rgb(63, 62, 62);
+  background: #3f3e3e;
   color: #fff;
   position: fixed;
   left: auto;
@@ -9,18 +9,18 @@
   width: 25%;
   min-width: 250px;
   z-index: 9999;
-  box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.6), 0 16px 20px 0 rgba(0, 0, 0, 0.29);
+  box-shadow: 0 14px 18px 0 #00000099, 0 16px 20px 0 #0000004a;
   /* opacity: 0; */
 }
 
 .list-group-item {
   font-size: 16px;
-  background-color: rgb(247, 247, 247);
+  background-color: #f7f7f7;
   color: black;
 }
 
 .backToDashboard {
-  background-color: rgb(247, 247, 247);
+  background-color: #f7f7f7;
   color: black;
   cursor: pointer;
   font-size: 18px;
