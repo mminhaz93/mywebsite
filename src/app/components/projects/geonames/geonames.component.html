@@ -6,6 +6,10 @@
         <input type="text" [(ngModel)]="searchText" class="form-control" placeholder="Search Country" />
       </div>
       <div class="col-md-2">
+        <input type="checkbox" [class.active]="filterBy==='asia'" (click)="filterBy('asia')">
+        <label for="asian countries">Asian Country</label>
+      </div>
+      <div class="col-md-2">
         <button class="btn btn-secondary" [class.active]="filterBy==='all'" (click)="filterBy('all')">
           All Countries
         </button>
@@ -16,11 +20,16 @@
         </button>
       </div>
       <div class="col-md-2">
+        <button class="btn btn-secondary" [class.active]="filterBy==='asia'" (click)="filterBy('asia')">
+          Asian Countries
+        </button>
+      </div>
+      <div class="col-md-2">
         <button class="btn btn-secondary" [class.active]="filterBy==='pop'" (click)="filterBy('pop')">
           Population > 1M
         </button>
       </div>
-      <div class="col-md-2">
+      <!-- <div class="col-md-2">
         <button class="btn btn-secondary" (click)="sort('countryName')">
           Sort by Name
         </button>
@@ -29,7 +38,7 @@
         <button class="btn btn-secondary" (click)="sort('population')">
           Sort by Population
         </button>
-      </div>
+      </div> -->
     </div>
     <table class="table table-bordered table-striped table-hover table-fixed-header">
       <thead class="header">
