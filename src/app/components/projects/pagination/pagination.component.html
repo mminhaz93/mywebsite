@@ -21,7 +21,7 @@
         </tbody>
       </table>
       <!-- pager -->
-      <div class="row">
+      <div class="row justify-content-center">
         <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
           <li [ngClass]="{disabled:pager.currentPage === 1}">
             <a (click)="setPage(1)">&lt;&lt;</a>
