@@ -1,7 +1,6 @@
 .nav {
   margin-top: 1.5rem;
   padding-bottom: 0.1rem;
-  border-bottom: 0.001rem solid #ffffff;
 }
 
 .nav-link {
@@ -19,12 +18,12 @@
 }
 
 a.active-link {
-  border-bottom: 2px solid #3f3e3e ;
+  border-bottom: 2px solid #3f3e3e;
   color: #a71f15 !important;
 }
 
 .nav-link.active {
-  border-bottom: 2px solid #BD4B47; 
+  border-bottom: 2px solid #BD4B47;
 }
 
 .title {
@@ -44,5 +43,5 @@ a.active-link {
 }
 
 .fa-bullseye {
-  color: #a71f15 ;
+  color: #a71f15;
 }
