@@ -1,0 +1,117 @@
+.name {
+  margin: 10px;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -0.24px;
+  word-spacing: 0px;
+  text-decoration: none solid #333333;
+  vertical-align: top;
+  line-height: 32px;
+  text-align: center !important;
+  color: #304252;
+  padding-top: 15px;
+}
+
+.profession{
+    text-align: center !important;
+}
+
+.propic {
+  width: 85px;
+  height: 100px;
+  margin-top: 10px;
+  padding-left: 10px;
+  border-right: 5px solid rgb(34, 163, 248);
+    /* -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%); */
+}
+
+.about-des{
+    padding-left: 20px;
+}
+
+.left-panel {
+  /* background-color: cadetblue; */
+  text-align: center !important;
+  padding-left: 3%;
+}
+
+hr {
+  border: 1px solid #f0f8ff;
+}
+
+.about-details {
+  border-top: 3px solid rgb(34, 163, 248);
+  border-bottom: 3px solid rgb(34, 163, 248);
+  margin: 30px 0 10px 0;
+  padding: 10px 0 10px 0;
+}
+
+.section {
+  margin: 10px 0px 10px 0px;
+  width: 75%;
+  -webkit-transform: skew(160deg);
+  -moz-transform: skew(160deg);
+  -o-transform: skew(160deg);
+  background: #304252;
+  color: white;
+}
+
+.personal,
+.social {
+  text-align: left !important;
+  padding-left: 15px;
+  margin-bottom: 10px;
+}
+
+b {
+  margin-right: 10px;
+}
+
+.fa {
+  padding: 5px;
+  font-size: 20px;
+  width: 30px;
+  text-align: center !important;
+  text-decoration: none;
+  border-radius: 25px;
+  color: white;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-linkedin {
+  background: #117CB3;
+}
+
+.fa-youtube {
+  background: #B90710;
+}
+
+.fa-bitbucket {
+  background: #23517F;
+}
+
+.fa-github {
+  background: #482A76;
+}
+
+.fa-google-plus {
+  background: #DA4C43;
+}
+
+tr{
+  text-align: center !important;
+}
+
+.container{
+  background-color: #314152;
+}
+
+.section-title{
+  line-height: 30px;
+  background-color: #3D99D9;
+  
+}

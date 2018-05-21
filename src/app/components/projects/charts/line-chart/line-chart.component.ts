@@ -14,7 +14,7 @@ export class LineChartComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.basicChart()
+    this.basicChart();
   }
 
 
