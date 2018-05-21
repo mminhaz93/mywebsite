@@ -10,7 +10,7 @@ import _ = require("lodash");
 })
 export class GeonamesComponent implements OnInit {
   isDesc: boolean = false;
-  column: string = "population";
+  column: string;
   countries: ICountry[];
   errorMessage: string;
   copyCountries: ICountry[] = [];

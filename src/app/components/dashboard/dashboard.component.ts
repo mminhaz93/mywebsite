@@ -28,10 +28,10 @@ export class DashboardComponent implements OnInit {
   id: any;
   menuState: string = 'out';
   projectsArray: Project[];
-  
+
   toggleMenu(key) {
-    this.menuState = this.menuState === 'out' ? 'in' : 'out';
-    // this.menuState = 'in';
+    // this.menuState = this.menuState === 'out' ? 'in' : 'out';
+    this.menuState = 'in';
     this.id = key;
     this.project = this.getProject(this.id);
   }
@@ -55,18 +55,18 @@ export class DashboardComponent implements OnInit {
       });
   }
 
-    getProject(id): Project{
-     // Get Client
-     this.projectService.getProject(this.id)
-       .snapshotChanges()
-       .subscribe(action => {
-         this.project = action.payload.toJSON();
-       });
-       return this.project;
-    }
- 
-    gotData(data){
-      this.menuState = data;
-      this.menuState = this.menuState === 'data' ? 'in' : 'out';
-    }
+  getProject(id): Project {
+    // Get Client
+    this.projectService.getProject(this.id)
+      .snapshotChanges()
+      .subscribe(action => {
+        this.project = action.payload.toJSON();
+      });
+    return this.project;
+  }
+
+  gotData(data) {
+    this.menuState = data;
+    this.menuState = this.menuState === 'data' ? 'in' : 'out';
+  }
 }
