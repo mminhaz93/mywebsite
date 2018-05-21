@@ -111,7 +111,7 @@ tr{
 }
 
 .section-title{
-  line-height: 30px;
   background-color: #3D99D9;
-  
+  color: white;
+  font-weight: 200 !important;
 }
