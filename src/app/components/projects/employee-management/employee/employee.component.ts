@@ -26,7 +26,8 @@ export class EmployeeComponent implements OnInit {
       this.employeeService.updateEmployee(employeeForm.value);
     }
     
-    this.resetForm();
+    if (employeeForm)
+      employeeForm.reset();
     this.tostr.success("Summitted Successfully", "Employee Register");
   }
 

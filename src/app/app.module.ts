@@ -21,7 +21,6 @@ import { TodoComponent } from "./components/projects/todo/todo.component";
 import { EmployeeComponent } from "./components/projects/employee-management/employee/employee.component";
 import { EmployeeListComponent } from "./components/projects/employee-management/employee-list/employee-list.component";
 import { EmployeesComponent } from "./components/projects/employee-management/employees/employees.component";
-import { BlogsComponent } from "./components/projects/blogs/blogs.component"; // npm install ngx-toastr --save
 //Services
 import { EmployeeService } from "./services/employee.service";
 import { DataService } from "./services/data.service";
@@ -44,6 +43,8 @@ import { OrderByPipe } from "./pipes/order-by.pipe";
 import { PaginationComponent } from "./components/projects/pagination/pagination.component";
 import { PagerService } from "./services/pager.service";
 import { PorfolioComponent } from "./components/porfolio/porfolio.component";
+import { BlogsComponent } from './components/blogs/blogs/blogs.component';
+import { BlogsService } from "./services/blogs.service";
 
 // Routes
 const appRoutes: Routes = [
@@ -53,12 +54,9 @@ const appRoutes: Routes = [
   { path: "quotes", component: PaginationComponent },
   { path: "geonames", component: GeonamesComponent },
   { path: "resume", component: PorfolioComponent },
-  // {path:'events', component: PaginationComponent},
+  {path:'blogs', component: BlogsComponent},
   { path: "charts", component: ChartsComponent },
-  // {path:'add-client', component:AddClientComponent, canActivate:[AuthGuard]},
   { path: "project/:id", component: SideBarComponent },
-  // {path:'edit-client/:id', component:EditClientComponent, canActivate:[AuthGuard]},
-  // {path:'settings', component:SettingsComponent, canActivate:[AuthGuard]},
   { path: "**", component: PageNotFoundComponent }
 ];
 @NgModule({
@@ -71,7 +69,6 @@ const appRoutes: Routes = [
     EmployeeComponent,
     EmployeeListComponent,
     EmployeesComponent,
-    BlogsComponent,
     PageNotFoundComponent,
     BackToDashBoardComponent,
     LineChartComponent,
@@ -83,7 +80,8 @@ const appRoutes: Routes = [
     OrderByPipe,
     CategoryComponent,
     PaginationComponent,
-    PorfolioComponent
+    PorfolioComponent,
+    BlogsComponent
   ],
   imports: [
     BrowserModule,
@@ -103,15 +101,15 @@ const appRoutes: Routes = [
       radius: 50,
       outerStrokeWidth: 10,
       innerStrokeWidth: 10,
-      space : -10,
+      space: -10,
       outerStrokeColor: "#3B96D7",
       innerStrokeColor: "#E7E8EA",
       animationDuration: 300,
       showSubtitle: false,
-      titleFontSize: '30',
-      unitsFontSize:'30',
-      showInnerStroke:true,
-      responsive: false,
+      titleFontSize: "30",
+      unitsFontSize: "30",
+      showInnerStroke: true,
+      responsive: true
     })
   ],
   providers: [
@@ -121,7 +119,8 @@ const appRoutes: Routes = [
     ChartService,
     EmployeeService,
     GeonameService,
-    PagerService
+    PagerService,
+    BlogsService
   ],
   bootstrap: [AppComponent]
 })

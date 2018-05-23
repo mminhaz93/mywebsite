@@ -1,5 +1,6 @@
 input.ng-valid.ng-dirty{
-    border: 1px solid red;
+    border: 1px solid rgb(25, 131, 11);
+    
 }
 
 button:hover, a.btn:hover{

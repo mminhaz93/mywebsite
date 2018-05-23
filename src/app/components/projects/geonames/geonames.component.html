@@ -2,12 +2,8 @@
 <div class="container">
   <div class="table-responsive" *ngIf="countries">
     <div class="row filterBy">
-      <div class="col-md-2">
+      <div class="col-md-4">
         <input type="text" [(ngModel)]="searchText" class="form-control" placeholder="Search Country" />
-      </div>
-      <div class="col-md-2">
-        <input type="checkbox" [class.active]="filterBy==='asia'" (click)="filterBy('asia')">
-        <label for="asian countries">Asian Country</label>
       </div>
       <div class="col-md-2">
         <button class="btn btn-secondary" [class.active]="filterBy==='all'" (click)="filterBy('all')">

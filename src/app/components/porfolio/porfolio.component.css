@@ -1,3 +1,10 @@
+.download-btn{
+  margin: 2px;
+  float: right;
+  /* line-height: 10px !important; */
+  background: #5396D6;
+  padding: 0 5px 0 5px;
+}
 .name {
   margin: 10px;
   font-size: 40px;
@@ -12,22 +19,21 @@
   padding-top: 15px;
 }
 
-.profession{
-    text-align: center !important;
+.profession {
+  text-align: center !important;
 }
 
 .propic {
-  width: 85px;
   height: 100px;
   margin-top: 10px;
   padding-left: 10px;
-  border-right: 5px solid rgb(34, 163, 248);
-    /* -webkit-filter: grayscale(100%); 
+  border-right: 3px solid rgb(34, 163, 248);
+  /* -webkit-filter: grayscale(100%); 
     filter: grayscale(100%); */
 }
 
-.about-des{
-    padding-left: 20px;
+.about-des {
+  padding-left: 20px;
 }
 
 .left-panel {
@@ -37,12 +43,14 @@
 }
 
 hr {
-  border: 1px solid #f0f8ff;
+  /* border: 1px solid #f0f8ff; */
+  border: 1px solid rgb(34, 163, 248);
+  margin-bottom: 0rem !important;
 }
 
 .about-details {
-  border-top: 3px solid rgb(34, 163, 248);
-  border-bottom: 3px solid rgb(34, 163, 248);
+  border-top: 2px solid rgb(34, 163, 248);
+  border-bottom: 2px solid rgb(34, 163, 248);
   margin: 30px 0 10px 0;
   padding: 10px 0 10px 0;
 }
@@ -60,8 +68,13 @@ hr {
 .personal,
 .social {
   text-align: left !important;
-  padding-left: 15px;
+  /* padding-left: 15px; */
   margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.personal i {
+  color: black;
 }
 
 b {
@@ -90,8 +103,8 @@ b {
   background: #B90710;
 }
 
-.fa-bitbucket {
-  background: #23517F;
+.blogger-b {
+  background: #E07144;
 }
 
 .fa-github {
@@ -102,16 +115,61 @@ b {
   background: #DA4C43;
 }
 
-tr{
+.spinner tr {
   text-align: center !important;
 }
 
-.container{
+.container {
+  margin-top: 10px;
   background-color: #314152;
 }
 
-.section-title{
-  background-color: #3D99D9;
-  color: white;
+
+.section-title {
+  color: #ffff;
   font-weight: 200 !important;
+  /* border-radius: 5px; */
+  text-align: left;
+  background: transparent;
+  border: transparent;
+  background-color: #3D99D9;
+  border-color: #3D99D9;
+  padding: 0 5px 0 5px;
+}
+
+.project-title{
+  color: white;
+}
+
+.project-info {
+  color: #ffff !important;
+  padding-left: 15px;
+}
+
+.education,
+.certification {
+  color: #ffff !important;
+  padding-left: 15px;
+}
+
+.certification {
+  padding-bottom: 10px;
+}
+
+b {
+  /* color: #5395D2; */
+  font-weight: 500;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+.date{
+  float: right;
+  background-color: #3D99D9;
+  text-align: center;
+  border-radius: 5px;
+  padding: 0 5px 0 5px;
+  line-height: 20px;
 }

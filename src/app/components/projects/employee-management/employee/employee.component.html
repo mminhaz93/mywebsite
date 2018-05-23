@@ -1,38 +1,55 @@
-<form #employeeForm="ngForm" (ngSubmit)="onSubmit(employeeForm)">
+<form novalidate #employeeForm="ngForm" (ngSubmit)="onSubmit(employeeForm)">
   <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="employeeService.selectedEmployee.$key">
   <!-- Name -->
   <div class="form-group">
     <label>Name</label>
-    <input class="form-control" name="name" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.name" placeholder="Full Name">
+    <input class="form-control" name="name" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.name" placeholder="Full Name"
+      minlength="2" required>
   </div>
+
+ <div *ngIf="name.errors?.required && name.touched" class="alert alert-danger">Name is required</div>
+  <div *ngIf="name.errors?.minlength && name.touched" class="alert alert-danger">Name should be at least 2 characters</div>
+
   <!-- Position -->
   <div class="form-group">
     <label>Position</label>
-    <input class="form-control" name="position" #position="ngModel" [(ngModel)]="employeeService.selectedEmployee.position" placeholder="Position">
+    <input class="form-control" name="position" #position="ngModel" [(ngModel)]="employeeService.selectedEmployee.position" placeholder="Position"
+      minlength="2" required>
   </div>
+  
+  <div *ngIf="position.errors?.required && position.touched" class="alert alert-danger">Position is required</div>
+  <div *ngIf="position.errors?.minlength && position.touched" class="alert alert-danger">Position should be at least 2 characters</div>
   <!-- Office -->
   <div class="form-group">
     <label>Office</label>
-  
-    <input class="form-control" name="office" #office="ngModel" [(ngModel)]="employeeService.selectedEmployee.office" placeholder="Office">
+    <input class="form-control" name="office" #office="ngModel" [(ngModel)]="employeeService.selectedEmployee.office" placeholder="Office"
+      minlength="2" required>
   </div>
+  
+  <div *ngIf="office.errors?.required && office.touched" class="alert alert-danger">Office is required</div>
+  <div *ngIf="office.errors?.minlength && office.touched" class="alert alert-danger">Office should be at least 2 characters</div>
   <!-- Salary -->
-    <div>
-      <label>Salary</label>
-      <div class="input-group mb-2">
-        <div class="input-group-prepend">
-          <div class="input-group-text"> <i class="fa fa-dollar"></i>  </div>
+  <div>
+    <label>Salary</label>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text">
+          <i class="fa fa-dollar"></i>
         </div>
-        <input class="form-control" name="salary" #salary="ngModel" [(ngModel)]="employeeService.selectedEmployee.salary" placeholder="Salary">
       </div>
+      <input class="form-control" name="salary" #salary="ngModel" [(ngModel)]="employeeService.selectedEmployee.salary" placeholder="Salary"
+      required>
     </div>
-    <!-- Button -->
-    <div class="form-group">
-      <button class="btn btn-primary" type="sucess">
-        <i class="fa fa-floppy-o"></i>
-        Submit</button>
-      <button class="btn btn-danger" type="button" (click)="resetForm(employeeForm)">
-        <i class="fa fa-repeat"></i>
-        Reset</button>
-    </div>
+  </div>
+  
+  <div *ngIf="salary.errors?.required && (salary.touched && salary.dirty)" class="alert alert-danger">Salary is required</div>
+  <!-- Buttons -->
+  <div class="form-group">
+    <button [disabled]="employeeForm.form.invalid" class="btn btn-primary" type="sucess">
+      <i class="fa fa-floppy-o"></i>
+      Submit</button>
+    <button class="btn btn-danger" type="button" (click)="resetForm(employeeForm)">
+      <i class="fa fa-repeat"></i>
+      Reset</button>
+  </div>
 </form>
