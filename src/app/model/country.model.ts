@@ -5,4 +5,4 @@ export interface ICountry {
     areaInSqKm?: string;
     population?: string;
     continentName?: string;
-  }
+}

@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 //Firebase
 import { AngularFireDatabase, AngularFireList } from "angularfire2/database";
 
+
 @Injectable()
 export class BlogsService {
   blogsList: AngularFireList<any>;
@@ -21,4 +22,9 @@ export class BlogsService {
       link: blogLink
     });
   }
+
+  insertBlog(formValue){
+    this.blogsList.push(formValue);
+  }
+
 }

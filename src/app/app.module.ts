@@ -3,6 +3,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from "@angular/http";
 import { ToastrModule } from "ngx-toastr";
 import { RouterModule, Routes } from "@angular/router";
@@ -43,8 +44,9 @@ import { OrderByPipe } from "./pipes/order-by.pipe";
 import { PaginationComponent } from "./components/projects/pagination/pagination.component";
 import { PagerService } from "./services/pager.service";
 import { PorfolioComponent } from "./components/porfolio/porfolio.component";
-import { BlogsComponent } from './components/blogs/blogs/blogs.component';
+import { BlogsComponent } from "./components/blogs/blogs/blogs.component";
 import { BlogsService } from "./services/blogs.service";
+import { AddBlogComponent } from './components/blogs/add-blog/add-blog.component';
 
 // Routes
 const appRoutes: Routes = [
@@ -54,7 +56,8 @@ const appRoutes: Routes = [
   { path: "quotes", component: PaginationComponent },
   { path: "geonames", component: GeonamesComponent },
   { path: "resume", component: PorfolioComponent },
-  {path:'blogs', component: BlogsComponent},
+  { path: "blogs", component: BlogsComponent },
+  // {path:'hero', component: HeroFormComponent},
   { path: "charts", component: ChartsComponent },
   { path: "project/:id", component: SideBarComponent },
   { path: "**", component: PageNotFoundComponent }
@@ -81,11 +84,13 @@ const appRoutes: Routes = [
     CategoryComponent,
     PaginationComponent,
     PorfolioComponent,
-    BlogsComponent
+    BlogsComponent,
+    AddBlogComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     HttpClientModule,
     BrowserAnimationsModule,
