@@ -11,7 +11,6 @@ import { ToastrService } from "ngx-toastr";
 export class BlogsComponent implements OnInit {
   blogListArray: any[];
 
-
   constructor(
     private blogService: BlogsService,
     private tostr: ToastrService

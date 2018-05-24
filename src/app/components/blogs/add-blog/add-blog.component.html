@@ -1,0 +1,15 @@
+<form [formGroup]="myForm" [hidden]="success" (ngSubmit)="submitHandler()">
+
+    <input placeholder="Date" formControlName="date">
+  <div>
+    <input placeholder="Title" formControlName="title">
+  </div>
+  <div>
+    <input placeholder="Link" formControlName="link">
+  </div>
+  <button class="btn btn-secondary" type="submit" [disabled]="myForm.invalid">Add Blog</button>
+</form>
+
+<div *ngIf="success" class="notification is-success">
+  Yay! We received your submission
+</div>
