@@ -1,11 +1,10 @@
 <form [formGroup]="myForm" [hidden]="success" (ngSubmit)="submitHandler()">
-
-    <input placeholder="Date" formControlName="date">
+  <input type="date" placeholder="Date" formControlName="date">
   <div>
-    <input placeholder="Title" formControlName="title">
+    <input type="text" placeholder="Title" formControlName="title">
   </div>
   <div>
-    <input placeholder="Link" formControlName="link">
+    <input type="text" placeholder="Link" formControlName="link">
   </div>
   <button class="btn btn-secondary" type="submit" [disabled]="myForm.invalid">Add Blog</button>
 </form>

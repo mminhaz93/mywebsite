@@ -3,7 +3,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from "@angular/forms";
 import { HttpModule } from "@angular/http";
 import { ToastrModule } from "ngx-toastr";
 import { RouterModule, Routes } from "@angular/router";
@@ -37,7 +37,6 @@ import { ChartService } from "./services/chart.service";
 import { ChartsComponent } from "./components/projects/charts/charts/charts.component";
 import { GeonamesComponent } from "./components/projects/geonames/geonames.component";
 import { GeonameService } from "./services/geoname.service";
-import { CategoryComponent } from "./components/projects/category/category.component";
 import { CountryPipe } from "./pipes/country.pipe";
 import { CategoryPipe } from "./pipes/category.pipe";
 import { OrderByPipe } from "./pipes/order-by.pipe";
@@ -46,7 +45,7 @@ import { PagerService } from "./services/pager.service";
 import { PorfolioComponent } from "./components/porfolio/porfolio.component";
 import { BlogsComponent } from "./components/blogs/blogs/blogs.component";
 import { BlogsService } from "./services/blogs.service";
-import { AddBlogComponent } from './components/blogs/add-blog/add-blog.component';
+import { AddBlogComponent } from "./components/blogs/add-blog/add-blog.component";
 
 // Routes
 const appRoutes: Routes = [
@@ -81,7 +80,6 @@ const appRoutes: Routes = [
     CountryPipe,
     CategoryPipe,
     OrderByPipe,
-    CategoryComponent,
     PaginationComponent,
     PorfolioComponent,
     BlogsComponent,
@@ -98,7 +96,7 @@ const appRoutes: Routes = [
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     // RouterModule.forRoot(appRoutes, {useHash: true}),
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, { useHash: true }),
     //Toastr
     ToastrModule.forRoot(),
     NgCircleProgressModule.forRoot({

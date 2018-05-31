@@ -1,7 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ICountry } from "../../../model/country.model";
 import { GeonameService } from "../../../services/geoname.service";
-import _ = require("lodash");
 
 @Component({
   selector: "app-geonames",
