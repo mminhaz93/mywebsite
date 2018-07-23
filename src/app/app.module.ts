@@ -46,6 +46,7 @@ import { PorfolioComponent } from "./components/porfolio/porfolio.component";
 import { BlogsComponent } from "./components/blogs/blogs/blogs.component";
 import { BlogsService } from "./services/blogs.service";
 import { AddBlogComponent } from "./components/blogs/add-blog/add-blog.component";
+import { AgeCalculatorComponent } from './components/projects/age-calculator/age-calculator.component';
 
 // Routes
 const appRoutes: Routes = [
@@ -56,7 +57,7 @@ const appRoutes: Routes = [
   { path: "geonames", component: GeonamesComponent },
   { path: "resume", component: PorfolioComponent },
   { path: "blogs", component: BlogsComponent },
-  // {path:'hero', component: HeroFormComponent},
+  {path:'age', component: AgeCalculatorComponent},
   { path: "charts", component: ChartsComponent },
   { path: "project/:id", component: SideBarComponent },
   { path: "**", component: PageNotFoundComponent }
@@ -83,7 +84,8 @@ const appRoutes: Routes = [
     PaginationComponent,
     PorfolioComponent,
     BlogsComponent,
-    AddBlogComponent
+    AddBlogComponent,
+    AgeCalculatorComponent
   ],
   imports: [
     BrowserModule,

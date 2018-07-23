@@ -3,8 +3,8 @@
     <i class="fa fa-arrow-circle-o-left"></i> Back to Dashboard</a>
 </div>
 
-<ul class="list-group list-group-flush">
-  <li id = "title" class="list-group-item">{{project.title}}</li>
+<ul *ngIf="project" class="list-group list-group-flush">
+  <li id="title" class="list-group-item">{{project.title}}</li>
   <li class="list-group-item">{{project.discription}}</li>
   <li class="list-group-item">Difficulty: {{project.difficulty}}</li>
   <li class="list-group-item">Rating: {{project.rate}}</li>

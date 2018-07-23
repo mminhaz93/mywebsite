@@ -1,0 +1,68 @@
+<div class="row">
+  <h5>Age Calculator</h5>
+</div>
+
+<div class="row">
+
+</div>
+<!-- Date of birth -->
+<table>
+  <tbody>
+    <tr>
+      <td class="ageAtDate">
+        Date of Birth
+      </td>
+      <table>
+        <tr>
+          <td align="right">
+            <select>
+              <option *ngFor="let month of months">{{month}}</option>
+            </select>
+          </td>
+          <td>
+            <select>
+              <option *ngFor="let day of days">{{day}}</option>
+            </select>
+          </td>
+          <td>
+            <input type="text" size="6" value="{{year}}">
+          </td>
+          <td>
+            <i class="fa far fa-calendar"></i>
+          </td>
+        </tr>
+      </table>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Age at the Date of -->
+<table>
+  <tbody>
+    <tr>
+      <td class="ageAtDate">
+        Age at the Date of
+      </td>
+      <table>
+        <tr>
+          <td align="middle">
+            <select>
+              <option *ngFor="let month of months">{{month}}</option>
+            </select>
+          </td>
+          <td>
+            <select>
+              <option *ngFor="let day of days">{{day}}</option>
+            </select>
+          </td>
+          <td>
+            <input type="text" size="6" value="{{year}}">
+          </td>
+          <td>
+            <i class="fa far fa-calendar"></i>
+          </td>
+        </tr>
+      </table>
+    </tr>
+  </tbody>
+</table>

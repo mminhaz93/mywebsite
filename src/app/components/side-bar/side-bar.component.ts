@@ -13,7 +13,6 @@ export class SideBarComponent {
 
   menuState: string = 'in';
   id: string;
-  // project: Project;
 
   @Input()
   project: any;
@@ -37,15 +36,6 @@ export class SideBarComponent {
   }
 
   ngOnInit() {
-    // // Get ID
-    // this.id = this.route.snapshot.params['id'];
-
-    // // Get Client
-    // this.projectService.getProject(this.id)
-    //   .snapshotChanges()
-    //   .subscribe(action => {
-    //     this.project = action.payload.toJSON();
-    //   });
   }
 
 }
