@@ -5,29 +5,25 @@
     <label>Name</label>
     <input class="form-control" name="name" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.name" placeholder="Full Name"
       minlength="2" required>
+    <div *ngIf="name.errors?.required && name.touched" class="alert alert-danger">Name is required</div>
+    <div *ngIf="name.errors?.minlength && name.touched" class="alert alert-danger">Name should be at least 2 characters</div>
   </div>
-
- <div *ngIf="name.errors?.required && name.touched" class="alert alert-danger">Name is required</div>
-  <div *ngIf="name.errors?.minlength && name.touched" class="alert alert-danger">Name should be at least 2 characters</div>
-
   <!-- Position -->
   <div class="form-group">
     <label>Position</label>
     <input class="form-control" name="position" #position="ngModel" [(ngModel)]="employeeService.selectedEmployee.position" placeholder="Position"
       minlength="2" required>
+    <div *ngIf="position.errors?.required && position.touched" class="alert alert-danger">Position is required</div>
+    <div *ngIf="position.errors?.minlength && position.touched" class="alert alert-danger">Position should be at least 2 characters</div>
   </div>
-  
-  <div *ngIf="position.errors?.required && position.touched" class="alert alert-danger">Position is required</div>
-  <div *ngIf="position.errors?.minlength && position.touched" class="alert alert-danger">Position should be at least 2 characters</div>
   <!-- Office -->
   <div class="form-group">
     <label>Office</label>
     <input class="form-control" name="office" #office="ngModel" [(ngModel)]="employeeService.selectedEmployee.office" placeholder="Office"
       minlength="2" required>
+    <div *ngIf="office.errors?.required && office.touched" class="alert alert-danger">Office is required</div>
+    <div *ngIf="office.errors?.minlength && office.touched" class="alert alert-danger">Office should be at least 2 characters</div>
   </div>
-  
-  <div *ngIf="office.errors?.required && office.touched" class="alert alert-danger">Office is required</div>
-  <div *ngIf="office.errors?.minlength && office.touched" class="alert alert-danger">Office should be at least 2 characters</div>
   <!-- Salary -->
   <div>
     <label>Salary</label>
@@ -38,11 +34,10 @@
         </div>
       </div>
       <input class="form-control" name="salary" #salary="ngModel" [(ngModel)]="employeeService.selectedEmployee.salary" placeholder="Salary"
-      required>
+        required>
     </div>
+    <div *ngIf="salary.errors?.required && (salary.touched && salary.dirty)" class="alert alert-danger">Salary is required</div>
   </div>
-  
-  <div *ngIf="salary.errors?.required && (salary.touched && salary.dirty)" class="alert alert-danger">Salary is required</div>
   <!-- Buttons -->
   <div class="form-group">
     <button [disabled]="employeeForm.form.invalid" class="btn btn-primary" type="sucess">

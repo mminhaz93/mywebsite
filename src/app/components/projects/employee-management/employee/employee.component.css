@@ -1,18 +1,18 @@
-input.ng-valid.ng-dirty{
-    border: 1px solid rgb(25, 131, 11);
-    
+.form-control.ng-invalid.ng-touched {
+  border: 2px solid red;
 }
 
-button:hover, a.btn:hover{
-    cursor: pointer;
+button:hover,
+a.btn:hover {
+  cursor: pointer;
 }
 
-.btn{
-    border-radius: 25px;
-    font-size: 15px;
-    font-weight: 200;
-    letter-spacing: -0.24px;
-    word-spacing: 0px;
-    line-height: 20px;
-    vertical-align: middle;
+.btn {
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 200;
+  letter-spacing: -0.24px;
+  word-spacing: 0px;
+  line-height: 20px;
+  vertical-align: middle;
 }
