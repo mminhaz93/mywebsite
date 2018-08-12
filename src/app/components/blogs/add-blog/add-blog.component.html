@@ -11,9 +11,11 @@
     <div>
       <input type="text" placeholder="Link" formControlName="link">
     </div>
-    <button class="btn btn-secondary" type="submit">Add Blog</button>
+    <button class="btn btn-info btn-lg btn-block m-2" type="submit">Add Blog</button>
+    <br>
   </form>
-  <div *ngIf="success" class="notification is-success">
-    Yay! We received your submission
+  <div *ngIf="success" class="m-2 alert alert-success text-center" role="alert">
+    <strong>Yay!</strong> New blog is added.
+    <br>
   </div>
 </div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { BlogsService } from "../../../services/blogs.service";
 import { NgForm } from "@angular/forms";
 import { ToastrService } from "ngx-toastr";
+import * as moment from "moment";
 
 @Component({
   selector: "app-blogs",
@@ -44,14 +45,8 @@ export class BlogsComponent implements OnInit {
     blogTitle.value = null;
     blogLink.value = null;
   }
-
-  // onSubmit(blogForm: NgForm) {
-  //   console.log(blogForm.value);
-  //   // To update user
-  //   if (blogForm.value.$key == null) {
-
-  //     this.blogService.addBlog(blogForm.value);
-  //   }
-  //   this.tostr.success("Blog added successfully", "Add Blog");
-  // }
+  toDate(dateFromDb) {
+    var dateFormat = moment(dateFromDb).format("MMM Do YYYY");
+    return dateFormat;
+  }
 }

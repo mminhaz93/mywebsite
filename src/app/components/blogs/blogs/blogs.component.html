@@ -13,7 +13,8 @@
 
               </td>
               <td>
-                <div class="post-date">{{blog.date}}</div>
+                <div class="post-date">{{toDate(blog.date)}}
+                </div>
                 <div class="recent-post-title">
                   <a [href]="[blog.link]" target="_top" target="blank">{{blog.title}}</a>
                 </div>
