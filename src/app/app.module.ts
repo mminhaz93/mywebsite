@@ -46,7 +46,17 @@ import { PorfolioComponent } from "./components/porfolio/porfolio.component";
 import { BlogsComponent } from "./components/blogs/blogs/blogs.component";
 import { BlogsService } from "./services/blogs.service";
 import { AddBlogComponent } from "./components/blogs/add-blog/add-blog.component";
-import { AgeCalculatorComponent } from './components/projects/age-calculator/age-calculator.component';
+import { AgeCalculatorComponent } from "./components/projects/age-calculator/age-calculator.component";
+import { CarouselComponent } from "./components/dashboard/carousel/carousel.component";
+import { FooterComponent } from "./components/footer/footer.component";
+import { GallaryComponent } from "./components/gallery/gallary.component";
+import { UploadComponent } from "./components/gallery/upload/upload.component";
+import { LoginComponent } from "./components/gallery/login/login.component";
+import { ImageService } from "./services/image.service";
+import { AuthenticationService } from "./services/authentication.service";
+import { UploadService } from "./services/upload.service";
+import { AuthenticationGuard } from "./services/authenticationGuard.service";
+import { AngularFireAuthModule } from "angularfire2/auth";
 
 // Routes
 const appRoutes: Routes = [
@@ -55,16 +65,28 @@ const appRoutes: Routes = [
   { path: "employees", component: EmployeesComponent },
   { path: "quotes", component: PaginationComponent },
   { path: "geonames", component: GeonamesComponent },
-  { path: "resume", component: PorfolioComponent },
-  { path: "blogs", component: BlogsComponent },
-  {path:'age', component: AgeCalculatorComponent},
+  { path: "portfolio", component: PorfolioComponent },
+  {
+    path: "blogs",
+    component: BlogsComponent
+  },
+  { path: "age", component: AgeCalculatorComponent },
   { path: "charts", component: ChartsComponent },
+  { path: "gallary", component: GallaryComponent },
+  {
+    path: "upload",
+    component: UploadComponent,
+    canActivate: [AuthenticationGuard]
+  },
+  { path: "login", component: LoginComponent },
   { path: "project/:id", component: SideBarComponent },
   { path: "**", component: PageNotFoundComponent }
 ];
 @NgModule({
   declarations: [
     AppComponent,
+    UploadComponent,
+    LoginComponent,
     DashboardComponent,
     NavComponent,
     SideBarComponent,
@@ -85,9 +107,13 @@ const appRoutes: Routes = [
     PorfolioComponent,
     BlogsComponent,
     AddBlogComponent,
-    AgeCalculatorComponent
+    AgeCalculatorComponent,
+    CarouselComponent,
+    FooterComponent,
+    GallaryComponent
   ],
   imports: [
+    AngularFireAuthModule,
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
@@ -125,7 +151,11 @@ const appRoutes: Routes = [
     EmployeeService,
     GeonameService,
     PagerService,
-    BlogsService
+    BlogsService,
+    ImageService,
+    AuthenticationGuard,
+    AuthenticationService,
+    UploadService
   ],
   bootstrap: [AppComponent]
 })

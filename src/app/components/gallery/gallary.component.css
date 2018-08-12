@@ -1,0 +1,16 @@
+ul {
+  display: grid;
+  padding: 0;
+  margin: 20px auto;
+  align-items: center;
+  background: #343a40;
+}
+
+li {
+  display: inline;
+}
+img {
+  width: 100%;
+  border: 4px solid #eee;
+  box-shadow: #555 1px 1px 8px 1px;
+}

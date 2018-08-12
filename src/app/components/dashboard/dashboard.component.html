@@ -1,6 +1,9 @@
 <app-side-bar [@slideInOut]="menuState" [project]="project" (eventClicked)="gotData($event)"></app-side-bar>
 
 <div class="row">
+  <app-carousel></app-carousel>
+</div>
+<div class="row">
   <div class="col-md-3 project card" *ngFor="let project of projectsArray">
     <div class="card-header project-title" [routerLink]="[project.link]" href="">
       <span>{{project.title}}</span>

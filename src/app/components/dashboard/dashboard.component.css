@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .rounded-circle {
   width: 100px;
   height: 100px;
@@ -15,20 +19,14 @@
   font-size: 11px;
   font-weight: 200;
   display: inline-block;
-  cursor: pointer;
   opacity: 0.95;
-  border-radius: 0em;
-}
-
-.project:hover {
-  /* margin-top: 5px; */
-  box-shadow: 0 7px 9px 0 #00000099, 0 8px 10px 0 #0000004a;
+  box-sizing: border-box;
 }
 
 .project-title {
-  /* color: #FFFF; */
-  color: #BD4B47;
-  background-color: #3f3e3e;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #343a40;
   font-size: 24px;
   font-weight: 200;
   letter-spacing: -0.24px;
@@ -38,25 +36,15 @@
   line-height: 32px;
 }
 
-.project-title:hover {
-  color: #FFFF;
-  background-color: #BD4B47;
-}
-
 .quickViewBtn {
   border-radius: 25px;
   font-size: 15px;
   font-weight: 200;
   letter-spacing: -0.24px;
   word-spacing: 0px;
-  color: #BD4B47;
+  color: #ffffff;
   line-height: 20px;
   vertical-align: middle;
   margin-bottom: 5px;
-  background-color: #3f3e3e;
-}
-
-.quickViewBtn:hover {
-  background-color: #BD4B47;
-  color: #FFFF;
+  background-color: #343a40;
 }

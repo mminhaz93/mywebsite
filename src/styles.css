@@ -1,13 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
-
 body {
-  background: linear-gradient( #ff00003b), url(assets/images/background.jpg);
+  background: linear-gradient(#ff00003b), url(assets/images/background.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  height: 40em !important;
   background-size: cover;
   width: auto;
+}
+
+.theme-color {
+  color: #317efb;
 }
 
 .container {
@@ -16,4 +18,8 @@ body {
   letter-spacing: -0.24px;
   word-spacing: 0px;
   text-decoration: none solid #333333;
+}
+
+html {
+  background-color: #343a40;
 }

@@ -1,14 +1,19 @@
-<form [formGroup]="myForm" [hidden]="success" (ngSubmit)="submitHandler()">
-  <input type="date" placeholder="Date" formControlName="date">
-  <div>
-    <input type="text" placeholder="Title" formControlName="title">
+<div class="container" *ngIf="(user|async)?.uid">
+  <hr>
+  <h1 class="lead display-4 text-center">Add New Blog</h1>
+  <form [formGroup]="myForm" [hidden]="success" (ngSubmit)="submitHandler()">
+    <div>
+      <input type="date" value="{{this.toDate()}}" formControlName="date" placeholder="Date">
+    </div>
+    <div>
+      <input type="text" placeholder="Title" formControlName="title">
+    </div>
+    <div>
+      <input type="text" placeholder="Link" formControlName="link">
+    </div>
+    <button class="btn btn-secondary" type="submit">Add Blog</button>
+  </form>
+  <div *ngIf="success" class="notification is-success">
+    Yay! We received your submission
   </div>
-  <div>
-    <input type="text" placeholder="Link" formControlName="link">
-  </div>
-  <button class="btn btn-secondary" type="submit" [disabled]="myForm.invalid">Add Blog</button>
-</form>
-
-<div *ngIf="success" class="notification is-success">
-  Yay! We received your submission
 </div>
