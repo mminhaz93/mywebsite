@@ -58,6 +58,8 @@ import { UploadService } from "./services/upload.service";
 import { AuthenticationGuard } from "./services/authenticationGuard.service";
 import { AngularFireAuthModule } from "angularfire2/auth";
 
+import { ServiceWorkerModule } from "@angular/service-worker";
+
 // Routes
 const appRoutes: Routes = [
   { path: "", component: DashboardComponent },
@@ -141,7 +143,8 @@ const appRoutes: Routes = [
       unitsFontSize: "30",
       showInnerStroke: true,
       responsive: true
-    })
+    }),
+    environment.production ? ServiceWorkerModule.register("ngsw-worker.js") : []
   ],
   providers: [
     ProjectService,

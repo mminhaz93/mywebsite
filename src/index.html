@@ -7,16 +7,21 @@
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#317EFB" />
   <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#317EFB" />
   <script src=" http://www.cloudformatter.com/Resources/Pages/CSS2Pdf/Script/xepOnline.jqPlugin.js "></script>
   <noscript>
-    <a href="">Ops something went wrong</a>
+    <h3 style="color: #673ab7; font-family: Helvetica; margin: 2rem;">
+      Sorry, but app is not available without javascript
+    </h3>
   </noscript>
 </head>
 
 <body>
-  <app-root></app-root>
+  <app-root>
+    <div id="spinner"></div>
+  </app-root>
 </body>
 
 </html>
