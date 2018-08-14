@@ -1,26 +1,30 @@
-  @media (max-width: 1200px) {
-    #searchForm {
-      display: none;
-    }
+@media (max-width: 1200px) {
+  #searchForm {
+    display: none;
   }
+}
 
-  .filterBy {
-    margin-bottom: 10px;
-  }
+.filterBy {
+  margin-bottom: 10px;
+}
 
-  .btn {
-    width: 155px;
-    border-radius: 25px;
-    font-size: 15px;
-    font-weight: 200;
-    letter-spacing: -0.24px;
-    word-spacing: 0px;
-    color: #BD4B47;
-    line-height: 20px;
-    vertical-align: middle;
-    background-color: #3f3e3e;
-  }
+.btn {
+  width: 155px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 200;
+  letter-spacing: -0.24px;
+  word-spacing: 0px;
+  color: #bd4b47;
+  line-height: 20px;
+  vertical-align: middle;
+  background-color: #3f3e3e;
+}
 
-  .table-responsive {
-    margin-top: 10px;
-  }
+.table-responsive {
+  margin-top: 10px;
+}
+
+.container {
+  padding-top: 10px;
+}

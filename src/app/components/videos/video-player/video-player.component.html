@@ -1,0 +1,13 @@
+<div *ngIf="!embedId" class="alert alert-success alert-dismissible fade show" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <strong>Play a video from below</strong>
+</div>
+<div>
+  <div *ngIf="embedId">
+    <div class="video-responsive">
+      <iframe class="video-player" [src]="getEmbedUrl() | safe" width="720" height="405" allow="autoplay;" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>

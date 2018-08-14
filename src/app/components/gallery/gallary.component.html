@@ -2,7 +2,9 @@
   <div class="grid row text-center">
     <ul class="col-3" *ngFor="let image of images | async ; let i = index ">
       <li>
+        <!-- <a [routerLink]="['/image', image.$key]"> -->
         <img src="{{image.url}}" class="tn">
+        <!-- </a> -->
       </li>
     </ul>
   </div>

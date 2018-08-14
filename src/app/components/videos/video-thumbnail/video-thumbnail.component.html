@@ -1,0 +1,15 @@
+<app-video-player [embedId]="embedId">
+  ></app-video-player>
+<div class="row">
+  <div class="col-md-3" *ngFor="let video of videoList">
+    <h5 class="video-title text-center">{{video.name}}</h5>
+    <div class="container">
+      <img [src]="video.image" alt="Avatar" class="image">
+      <div class="overlay">
+        <a (click)=viewVideo(video.embed) class="icon" title="{{video.name}}">
+          <i class="fa fa-play-circle"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

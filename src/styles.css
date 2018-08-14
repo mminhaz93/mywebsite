@@ -9,6 +9,7 @@ body {
 }
 
 .container {
+  margin: 20px;
   background-color: aliceblue;
   font-weight: 200;
   letter-spacing: -0.24px;
@@ -16,12 +17,11 @@ body {
   text-decoration: none solid #333333;
 }
 
-html {
-  background-color: #343a40;
-}
+/* background-color: #343a40; */
 
 #loader {
   width: 100px;
+
   height: 100px;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);

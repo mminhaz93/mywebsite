@@ -1,8 +1,16 @@
-.download-btn{
-  margin: 2px;
+.con {
+  color: #111;
+  background-color: #fbfbfb;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 80%;
+  border-radius: 3px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.download-btn {
+  margin: 1%;
   float: right;
-  /* line-height: 10px !important; */
-  background: #5396D6;
+  background: #5396d6;
   padding: 0 5px 0 5px;
 }
 .name {
@@ -96,23 +104,24 @@ b {
 }
 
 .fa-linkedin {
-  background: #117CB3;
+  background: #117cb3;
 }
 
 .fa-youtube {
-  background: #B90710;
+  background: #b90710;
 }
 
 .blogger-b {
-  background: #E07144;
+  background: #e07144;
+  font-size: 18px;
 }
 
 .fa-github {
-  background: #482A76;
+  background: #482a76;
 }
 
 .fa-google-plus {
-  background: #DA4C43;
+  background: #da4c43;
 }
 
 .spinner tr {
@@ -120,10 +129,9 @@ b {
 }
 
 .container {
-  margin-top: 10px;
+  padding-top: 10px;
   background-color: #314152;
 }
-
 
 .section-title {
   color: #ffff;
@@ -132,12 +140,12 @@ b {
   text-align: left;
   background: transparent;
   border: transparent;
-  background-color: #3D99D9;
-  border-color: #3D99D9;
+  background-color: #3d99d9;
+  border-color: #3d99d9;
   padding: 0 5px 0 5px;
 }
 
-.project-title{
+.project-title {
   color: white;
 }
 
@@ -165,9 +173,9 @@ ul {
   list-style-type: circle;
 }
 
-.date{
+.date {
   float: right;
-  background-color: #3D99D9;
+  background-color: #3d99d9;
   text-align: center;
   border-radius: 5px;
   padding: 0 5px 0 5px;

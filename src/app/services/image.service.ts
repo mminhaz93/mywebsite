@@ -22,4 +22,13 @@ export class ImageService {
       .valueChanges()
       .map(array => array.reverse());
   }
+
+  getImage(key: string) {
+    console.log(key);
+    return firebase
+      .database()
+      .ref("uploads/" + key)
+      .once("value")
+      .then(snap => snap.val());
+  }
 }

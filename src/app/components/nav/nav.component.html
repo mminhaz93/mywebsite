@@ -1,38 +1,38 @@
 <div class="container-fluid bg-dark">
 
-  <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <img class="logo mr-auto" src="assets/images/logo.png" alt="logo">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBarRef" aria-controls="navBarRef" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-md-center" id="navBarRef">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Dashboard</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" routerLink="/portfolio" routerLinkActive="active-link">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" routerLink="/blogs" routerLinkActive="active-link">Blogs</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" routerLink="/gallary" routerLinkActive="active-link">Gallary</a>
-          </li>
-          <li class="nav-item">
-            <a *ngIf="(user|async)?.uid" class="nav-link" routerLinkActive="active-link" routerLink="/upload">Upload</a>
-          </li>
-          <li class="nav-item">
-            <a *ngIf="!(user|async)?.uid" class="nav-link" routerLinkActive="active-link" routerLink="/login">Log In</a>
-          </li>
-          <li class="nav-item">
-            <a *ngIf="(user|async)?.uid" class="nav-link" href="#" (click)="logOut()">Log Out</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-
+  <nav class="navbar navbar-expand-lg navbar-dark ">
+    <img class="logo mr-auto" src="assets/images/logo.png" alt="logo">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBarRef" aria-controls="navBarRef" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-md-center" id="navBarRef">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLink="/videos" routerLinkActive="active-link">Journey</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLink="/gallary" routerLinkActive="active-link">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLink="/portfolio" routerLinkActive="active-link">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLink="/blogs" routerLinkActive="active-link">Blogs</a>
+        </li>
+        <li class="nav-item">
+          <a *ngIf="(user|async)?.uid" class="nav-link" routerLinkActive="active-link" routerLink="/upload">Upload</a>
+        </li>
+        <li class="nav-item">
+          <a *ngIf="!(user|async)?.uid" class="nav-link" routerLinkActive="active-link" routerLink="/login">Log In</a>
+        </li>
+        <li class="nav-item">
+          <a *ngIf="(user|async)?.uid" class="nav-link" href="#" (click)="logOut()">Log Out</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </div>

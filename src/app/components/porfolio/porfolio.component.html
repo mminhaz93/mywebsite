@@ -1,233 +1,227 @@
-<div id="content" #content>
-  <button class="btn btn-info download-btn" (click)="downloadPDF()">Export
-    <i class="fa fa-download"></i>
-  </button>
-  <h1 class="lead name">
-    MOHAMMED MINHAZ</h1>
-  <div class="profession">Application Developer / Architect </div>
-  <div class="row">
-    <div class="col-md-3 left-panel">
-      <!-- About Me -->
-      <div class="section">
-        <span>ABOUT ME</span>
-      </div>
-      <div class="personal">
-        <span>
+<div class="con">
+  <div id="content" #content>
+    <button class="btn btn-info download-btn" (click)="downloadPDF()">Export
+      <i class="fa fa-download"></i>
+    </button>
+    <h1 class="lead name">
+      MOHAMMED MINHAZ</h1>
+    <div class="profession">Application Developer / Architect </div>
+    <div class="row">
+      <div class="col-md-3 left-panel">
+        <!-- About Me -->
+        <div class="section">
+          <span>ABOUT ME</span>
+        </div>
+        <div class="personal">
           <div>
-            <i class="fa fa-phone"></i>
-            <b>Phone</b>3473065628</div>
-        </span>
-
-        <div>
-          <i class="fa fa-envelope"></i>
-          <b>Mail</b>mminhaz@ibm.com</div>
-        <div>
-          <i class="fa fa-globe"></i>
-          <b>Web</b>mminhaz.com</div>
+            <i class="fa fa-envelope"></i>
+            <b>Mail</b>mminhaz@ibm.com</div>
+          <div>
+            <i class="fa fa-globe"></i>
+            <b>Web</b>www.mminhaz.ml</div>
+        </div>
+        <div class="social">
+          <a href="https://www.linkedin.com/in/mohammed-minhaz-140163133" target="blank" class="fa fa-linkedin"></a>
+          <a href="https://plus.google.com/+minhaz33" target="blank" class="fa fa-google-plus"></a>
+          <a href="https://www.youtube.com/c/minhaz33" target="blank" class="fa fa fa-youtube"></a>
+          <a href="http://mohammedminhaz.blogspot.com/" target="blank" class="fa blogger-b">
+            <img src="../../../assets/images/blogger-b.svg" alt="B">
+          </a>
+          <a href="https://github.com/mminhaz93" target="blank" class="fa fa fa-github"></a>
+        </div>
       </div>
-      <div class="social">
-        <a href="https://www.linkedin.com/in/mohammed-minhaz-140163133" target="blank" class="fa fa-linkedin"></a>
-        <a href="https://plus.google.com/+minhaz33" target="blank" class="fa fa-google-plus"></a>
-        <a href="https://www.youtube.com/c/minhaz33" target="blank" class="fa fa fa-youtube"></a>
-        <a href="http://mohammedminhaz.blogspot.com/" target="blank" class="fa blogger-b">
-          <img src="https://firebasestorage.googleapis.com/v0/b/clientpanel-e7b62.appspot.com/o/blogger-b.svg?alt=media&token=375bb1ec-77b3-4c5b-8b44-518c6d824c2f"
-            alt="B">
-        </a>
-        <a href="https://github.com/mminhaz93" target="blank" class="fa fa fa-github"></a>
+      <div class="col-md-9">
+        <div class="about-details">
+          <table>
+            <tr>
+              <td>
+                <figure>
+                  <img class="img-thumbnail rounded-circle" src="../../../assets/images/pro2.png" alt="Mohammed Minhaz">
+                </figure>
+              </td>
+              <td>
+                <div class="about-des">Mohammed is a UI Developer with a specialization in Angular applications. He has been developing and testing
+                  Angular/JS applications while having the opportunity to apply these skills for various clients. In addition
+                  to delivering on client requirements, he has also taken an active role in mentoring others on these same
+                  technologies.
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
-    <div class="col-md-9">
-      <div class="about-details">
-        <table>
+
+    <!-- Skills -->
+    <div class="row">
+      <div class="col-md-3 left-panel">
+
+        <div class="section skill">
+          <span>SKILLS</span>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <table class="spinner">
           <tr>
             <td>
-              <figure>
-                <img class="img-thumbnail rounded-circle" src="https://firebasestorage.googleapis.com/v0/b/clientpanel-e7b62.appspot.com/o/pro2.png?alt=media&token=14f20b0e-9169-4f83-9d23-da7525255685"
-                  alt="Mohammed Minhaz">
-              </figure>
+              <circle-progress [percent]="85"></circle-progress>
+              <div>ANGULAR</div>
             </td>
             <td>
-              <div class="about-des">Mohammed is a UI Developer with a specialization in Angular applications. He has been developing and testing
-                Angular/JS applications while having the opportunity to apply these skills for various clients. In addition
-                to delivering on client requirements, he has also taken an active role in mentoring others on these same
-                technologies.
-              </div>
+              <circle-progress [percent]="75"></circle-progress>
+              <div>CSS</div>
+            </td>
+            <td>
+              <circle-progress [percent]="85"></circle-progress>
+              <div>HTML</div>
+            </td>
+            <td>
+              <circle-progress [percent]="90"></circle-progress>
+              <div>TS/JS</div>
+            </td>
+            <td>
+              <circle-progress [percent]="95"></circle-progress>
+              <div>UAT</div>
             </td>
           </tr>
         </table>
       </div>
     </div>
-  </div>
 
-  <!-- Skills -->
-  <div class="row">
-    <div class="col-md-3 left-panel">
-
-      <div class="section skill">
-        <span>SKILLS</span>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 ">
+          <span class="section-title">EXPERIENCE</span>
+        </div>
+        <div class="col-md-9">
+          <hr>
+        </div>
       </div>
-    </div>
-    <div class="col-md-9">
-      <table class="spinner">
-        <tr>
-          <td>
-            <circle-progress [percent]="85"></circle-progress>
-            <div>ANGULAR</div>
-          </td>
-          <td>
-            <circle-progress [percent]="75"></circle-progress>
-            <div>CSS</div>
-          </td>
-          <td>
-            <circle-progress [percent]="85"></circle-progress>
-            <div>HTML</div>
-          </td>
-          <td>
-            <circle-progress [percent]="90"></circle-progress>
-            <div>TS/JS</div>
-          </td>
-          <td>
-            <circle-progress [percent]="95"></circle-progress>
-            <div>UAT</div>
-          </td>
-        </tr>
-      </table>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-3 ">
-        <span class="section-title">EXPERIENCE</span>
+      <div class="project-des">
+        <table>
+          <tr>
+            <td>
+              <span class="project-title">
+                IBM</span>
+              <span class="project-title date">2017-2018</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="project-info">
+              <ul>
+                <li>Proficient in building Web User Interface (UI) using Angular, HTML, CSS, TypeScript, and TypeScript/JavaScript
+                  that follows W3C Web standards and are browser compatible</li>
+                <li>Proficient in responsive Web using Bootstrap grid frameworks which will be helpful formobile, tablet, Desktop
+                  resolutions
+                </li>
+                <li>Involved in developing best practices and skeleton framework for User Acceptance testing</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="project-title">
+                Fox Sports</span>
+              <span class="project-title date">2018-2018</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="project-info">
+              <ul>
+                <li>
+                  <i>
+                    <strong>Description:</strong>
+                  </i>The Highlight Machine provides access to matches from 2018 and hundreds of matches from FIFA World CupTM
+                  history.
+                </li>
+                <li>
+                  <i>
+                    <strong>Technology:</strong>
+                  </i> ReactJs, Github, Bitbucket, Parese.ly</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="project-title">
+                NYPD</span>
+              <span class="project-title date">2018-2018</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="project-info">
+              <ul>
+                <li>
+                  <i>
+                    <strong>Description:</strong>
+                  </i>Once a 911 call is put into the system, it's immediately blasted out to each NYPD iPhone in the precinct.
+                  The app also provides a list of what type of 911 calls have been made at that address in the past, and
+                  if there are any wanted felons at the address, alerting them to potential dangers.
+                </li>
+                <li>
+                  <i>
+                    <strong>Technology:</strong>
+                  </i>Xcode, Appium and Jira</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="project-title">
+                JPMC</span>
+              <span class="project-title date">2017-2018</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="project-info">
+              <ul>
+                <li>
+                  <i>
+                    <strong>Description:</strong>
+                  </i>J.P. Morgan Structured Investment Products. J.P. Morgan offers structured products across multiple asset
+                  classes, including equities, fixed income, credit, currencies and commodities.
+                </li>
+                <li>
+                  <i>
+                    <strong>Technology:</strong>
+                  </i>AngularJs, Protractor, Jira, Confluence, Bitbucket and TeamCity</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
       </div>
-      <div class="col-md-9">
-        <hr>
+      <!-- Education -->
+      <div class="row">
+        <div class="col-md-3">
+          <span class="section-title">EDUCATION</span>
+        </div>
+        <div class="col-md-9">
+          <hr>
+        </div>
       </div>
-    </div>
-    <div class="project-des">
-      <table>
-        <tr>
-          <td>
-            <span class="project-title">
-              <i class="fa fa-spinner fa-spin"></i>IBM</span>
-            <span class="project-title date">2017-2018</span>
-          </td>
-        </tr>
-        <tr>
-          <td class="project-info">
-            <ul>
-              <li>Proficient in building Web User Interface (UI) using Angular, HTML, CSS, TypeScript, and TypeScript/JavaScript
-                that follows W3C Web standards and are browser compatible</li>
-              <li>Proficient in responsive Web using Bootstrap grid frameworks which will be helpful formobile, tablet, Desktop
-                resolutions
-              </li>
-              <li>Involved in developing best practices and skeleton framework for User Acceptance testing</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span class="project-title">
-              <i class="fa fa-spinner fa-spin"></i>Fox Sports</span>
-            <span class="project-title date">2018-2018</span>
-          </td>
-        </tr>
-        <tr>
-          <td class="project-info">
-            <ul>
-              <li>
-                <i>
-                  <strong>Description:</strong>
-                </i>The Highlight Machine provides access to matches from 2018 and hundreds of matches from FIFA World CupTM
-                history.
-              </li>
-              <li>
-                <i>
-                  <strong>Technology:</strong>
-                </i> ReactJs, Github, Bitbucket, Parese.ly</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span class="project-title">
-              <i class="fa fa-spinner fa-spin"></i>NYPD</span>
-            <span class="project-title date">2018-2018</span>
-          </td>
-        </tr>
-        <tr>
-          <td class="project-info">
-            <ul>
-              <li>
-                <i>
-                  <strong>Description:</strong>
-                </i>Once a 911 call is put into the system, it's immediately blasted out to each NYPD iPhone in the precinct.
-                The app also provides a list of what type of 911 calls have been made at that address in the past, and if
-                there are any wanted felons at the address, alerting them to potential dangers.
-              </li>
-              <li>
-                <i>
-                  <strong>Technology:</strong>
-                </i>Xcode, Appium and Jira</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span class="project-title">
-              <i class="fa fa-spinner fa-spin"></i>JPMC</span>
-            <span class="project-title date">2017-2018</span>
-          </td>
-        </tr>
-        <tr>
-          <td class="project-info">
-            <ul>
-              <li>
-                <i>
-                  <strong>Description:</strong>
-                </i>J.P. Morgan Structured Investment Products. J.P. Morgan offers structured products across multiple asset
-                classes, including equities, fixed income, credit, currencies and commodities.
-              </li>
-              <li>
-                <i>
-                  <strong>Technology:</strong>
-                </i>AngularJs, Protractor, Jira, Confluence, Bitbucket and TeamCity</li>
-            </ul>
-          </td>
-        </tr>
-      </table>
-    </div>
-    <!-- Education -->
-    <div class="row">
-      <div class="col-md-3">
-        <span class="section-title">EDUCATION</span>
+      <div class="education">
+        <b> B.E., Electrical Engineering,</b>City College of New York, NY
       </div>
-      <div class="col-md-9">
-        <hr>
+      <!-- Certification -->
+      <div class="row">
+        <div class="col-md-3">
+          <span class="section-title">CERTIFICATION</span>
+        </div>
+        <div class="col-md-9">
+          <hr>
+        </div>
       </div>
-    </div>
-    <div class="education">
-      <b> B.E., Electrical Engineering,</b>City College of New York, NY
-    </div>
-    <!-- Certification -->
-    <div class="row">
-      <div class="col-md-3">
-        <span class="section-title">CERTIFICATION</span>
-      </div>
-      <div class="col-md-9">
-        <hr>
-      </div>
-    </div>
-    <div class="certification">
-      <div>
-        <b>CSD (Certified Scrum Developer),</b>Scrum Alliance
+      <div class="certification">
+        <div>
+          <b>CSD (Certified Scrum Developer),</b>Scrum Alliance
+        </div>
+        <div>
+          <b>CSM (Certified Scrum Master),</b>Scrum Alliance
+        </div>
       </div>
       <div>
-        <b>CSM (Certified Scrum Master),</b>Scrum Alliance
       </div>
     </div>
-    <div>
-    </div>
+    <br>
   </div>
-  <br>
 </div>

@@ -57,8 +57,13 @@ import { AuthenticationService } from "./services/authentication.service";
 import { UploadService } from "./services/upload.service";
 import { AuthenticationGuard } from "./services/authenticationGuard.service";
 import { AngularFireAuthModule } from "angularfire2/auth";
-
 import { ServiceWorkerModule } from "@angular/service-worker";
+import { VideosComponent } from "./components/videos/videos.component";
+import { VideoPlayerComponent } from "./components/videos/video-player/video-player.component";
+import { VideoThumbnailComponent } from "./components/videos/video-thumbnail/video-thumbnail.component";
+import { VideoService } from "./components/videos/videos.service";
+import { SafePipe } from "./pipes/safe.pipe";
+import { ImageDetailComponent } from "./components/gallery/image-detail/image-detail.component";
 
 // Routes
 const appRoutes: Routes = [
@@ -80,7 +85,15 @@ const appRoutes: Routes = [
     component: UploadComponent,
     canActivate: [AuthenticationGuard]
   },
+  {
+    path: "videos",
+    component: VideosComponent
+  },
   { path: "login", component: LoginComponent },
+  {
+    path: "image/:id",
+    component: ImageDetailComponent
+  },
   { path: "project/:id", component: SideBarComponent },
   { path: "**", component: PageNotFoundComponent }
 ];
@@ -105,6 +118,7 @@ const appRoutes: Routes = [
     CountryPipe,
     CategoryPipe,
     OrderByPipe,
+    SafePipe,
     PaginationComponent,
     PorfolioComponent,
     BlogsComponent,
@@ -112,7 +126,11 @@ const appRoutes: Routes = [
     AgeCalculatorComponent,
     CarouselComponent,
     FooterComponent,
-    GallaryComponent
+    GallaryComponent,
+    VideosComponent,
+    VideoPlayerComponent,
+    VideoThumbnailComponent,
+    ImageDetailComponent
   ],
   imports: [
     AngularFireAuthModule,
@@ -158,7 +176,8 @@ const appRoutes: Routes = [
     ImageService,
     AuthenticationGuard,
     AuthenticationService,
-    UploadService
+    UploadService,
+    VideoService
   ],
   bootstrap: [AppComponent]
 })

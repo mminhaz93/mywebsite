@@ -1,29 +1,31 @@
-<div>
-  <h4 class="display-4 text-center">Recent Posts</h4>
-  <div class="row">
-    <div class="col-md-4" *ngFor="let blog of blogListArray; let i = index">
-      <ul class="list-group">
-        <li class="list-group-item">
-          <table>
-            <tr>
-              <td class="blog-index">
-                <div class="badge blog-number">
-                  {{i+1}}
-                </div>
+<div class="container">
+  <div>
+    <h4 class="display-4 text-center">Recent Posts</h4>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let blog of blogListArray; let i = index">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <table>
+              <tr>
+                <td class="blog-index">
+                  <div class="badge blog-number">
+                    {{i+1}}
+                  </div>
 
-              </td>
-              <td>
-                <div class="post-date">{{toDate(blog.date)}}
-                </div>
-                <div class="recent-post-title">
-                  <a [href]="[blog.link]" target="_top" target="blank">{{blog.title}}</a>
-                </div>
-              </td>
-            </tr>
-          </table>
-        </li>
-      </ul>
+                </td>
+                <td>
+                  <div class="post-date">{{toDate(blog.date)}}
+                  </div>
+                  <div class="recent-post-title">
+                    <a [href]="[blog.link]" target="_top" target="blank">{{blog.title}}</a>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
+  <app-add-blog></app-add-blog>
 </div>
-<app-add-blog></app-add-blog>

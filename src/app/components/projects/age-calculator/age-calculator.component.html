@@ -1,24 +1,26 @@
-<h5 class="display-4 text-center">
-  Age Calculator</h5>
+<div class="container">
+  <h5 class="display-4 text-center">
+    Age Calculator</h5>
 
-<form #ageForm="ngForm" (ngSubmit)="onSubmit(ageForm)">
+  <form #ageForm="ngForm" (ngSubmit)="onSubmit(ageForm)">
 
-  <div class="form-group">
-    <label for="DOB">DOB</label>
-    <input type="date" class="form-control" id="date1" required [(ngModel)]="dates.date1" name="date1">
-  </div>
+    <div class="form-group">
+      <label for="DOB">DOB</label>
+      <input type="date" class="form-control" id="date1" required [(ngModel)]="dates.date1" name="date1">
+    </div>
 
-  <div class="form-group">
-    <label for="date">Date to Calculate</label>
-    <input type="date" class="form-control" id="date2" required [(ngModel)]="dates.date2" name="date2">
-  </div>
+    <div class="form-group">
+      <label for="date">Date to Calculate</label>
+      <input type="date" class="form-control" id="date2" required [(ngModel)]="dates.date2" name="date2">
+    </div>
 
-  <button [disabled]="ageForm.form.invalid" class="btn btn-primary" type="submit">
-    <i class="fa fa-floppy-o"></i>
-    Submit</button>
+    <button [disabled]="ageForm.form.invalid" class="btn btn-primary" type="submit">
+      <i class="fa fa-floppy-o"></i>
+      Submit</button>
 
-  <hr>
-  <div *ngIf="this.success" class="success">You are {{this.calYear}} year(s) old</div>
-  <div *ngIf="this.success" class="success">You are {{this.calMonth}} month(s) old</div>
-  <div *ngIf="this.success" class="success">You are {{this.calDay}} day(s) old</div>
-</form>
+    <hr>
+    <div *ngIf="this.success" class="success">You are {{this.calYear}} year(s) old</div>
+    <div *ngIf="this.success" class="success">You are {{this.calMonth}} month(s) old</div>
+    <div *ngIf="this.success" class="success">You are {{this.calDay}} day(s) old</div>
+  </form>
+</div>
