@@ -1,20 +1,22 @@
-<app-side-bar [@slideInOut]="menuState" [project]="project" (eventClicked)="gotData($event)"></app-side-bar>
+<div class="container">
+  <app-side-bar [@slideInOut]="menuState" [project]="project" (eventClicked)="gotData($event)"></app-side-bar>
 
-<div class="row">
-  <app-carousel></app-carousel>
-</div>
-<div class="row">
-  <div class="col-md-3 project card" *ngFor="let project of projectsArray">
-    <div class="card-header project-title" [routerLink]="[project.link]" href="">
-      <span>{{project.title}}</span>
+  <div class="row">
+    <app-carousel></app-carousel>
+  </div>
+  <div class="row">
+    <div class="col-md-3 project card" *ngFor="let project of projectsArray">
+      <div class="card-header project-title" [routerLink]="[project.link]" href="">
+        <span>{{project.title}}</span>
+      </div>
+      <figure>
+        <img class="rounded-circle" [routerLink]="[project.link]" [src]="project.img" alt="Generic placeholder image">
+      </figure>
+      <button class="btn quickViewBtn btn-sm btn-outline-secondary" [routerLink]="[project.link]" href="">
+        View Project
+      </button>
+      <a class="btn quickViewBtn btn-sm btn-outline-secondary" (click)="toggleMenu(project.$key)" href="#">
+        <i class="fa fa-arrow-circle-o-right"></i> Details</a>
     </div>
-    <figure>
-      <img class="rounded-circle" [routerLink]="[project.link]" [src]="project.img" alt="Generic placeholder image">
-    </figure>
-    <button class="btn quickViewBtn btn-sm btn-outline-secondary" [routerLink]="[project.link]" href="">
-      View Project
-    </button>
-    <a class="btn quickViewBtn btn-sm btn-outline-secondary" (click)="toggleMenu(project.$key)" href="#">
-      <i class="fa fa-arrow-circle-o-right"></i> Details</a>
   </div>
 </div>
