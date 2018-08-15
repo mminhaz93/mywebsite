@@ -10,7 +10,7 @@ export const environment = {
     authDomain: "todolistapp-fda9f.firebaseapp.com",
     databaseURL: "https://todolistapp-fda9f.firebaseio.com",
     projectId: "todolistapp-fda9f",
-    storageBucket: "todolistapp-fda9f.appspot.com",
+    storageBucket: "",
     messagingSenderId: "1095463223079"
   }
 };

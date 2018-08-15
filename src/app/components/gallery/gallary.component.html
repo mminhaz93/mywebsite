@@ -1,11 +1,12 @@
 <div class="container-fluid">
   <div class="grid row text-center">
-    <ul class="col-3" *ngFor="let image of images">
+    <ul class="col-3" *ngFor="let image of images | reverse">
       <li>
-        Key {{image.$key}}
-        <a [routerLink]="['/image', image.$key]">
-          <img src="{{image.url}}" class="tn">
-        </a>
+        <button type="button" data-toggle="modal" data-target="#modelID">
+          <a [routerLink]="['/image', image.$key]">
+            <img src="{{this.link(image.url)}}" class="tn">
+          </a>
+        </button>
       </li>
     </ul>
   </div>

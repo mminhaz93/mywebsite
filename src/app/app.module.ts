@@ -64,6 +64,7 @@ import { VideoThumbnailComponent } from "./components/videos/video-thumbnail/vid
 import { VideoService } from "./components/videos/videos.service";
 import { SafePipe } from "./pipes/safe.pipe";
 import { ImageDetailComponent } from "./components/gallery/image-detail/image-detail.component";
+import { ReversePipe } from "./pipes/reverse.pipe";
 
 // Routes
 const appRoutes: Routes = [
@@ -119,6 +120,7 @@ const appRoutes: Routes = [
     CategoryPipe,
     OrderByPipe,
     SafePipe,
+    ReversePipe,
     PaginationComponent,
     PorfolioComponent,
     BlogsComponent,

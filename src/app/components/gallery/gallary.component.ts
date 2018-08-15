@@ -31,4 +31,8 @@ export class GallaryComponent {
   ngOnChanges() {
     this.imageService.getImages();
   }
+
+  link(url) {
+    return "../../../assets/images/gallary/" + url;
+  }
 }

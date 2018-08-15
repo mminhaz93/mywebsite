@@ -25,9 +25,10 @@ export class ImageService {
   }
 
   getImage(id: string) {
-    this.image = this.db.object("/uploads/" + id) as AngularFireObject<
-      GalleryImage
-    >;
-    return this.image;
+    return firebase
+      .database()
+      .ref("uploads/" + id)
+      .once("value")
+      .then(snap => snap.val());
   }
 }

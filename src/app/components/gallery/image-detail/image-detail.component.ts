@@ -22,4 +22,8 @@ export class ImageDetailComponent implements OnInit {
   ngOnInit() {
     this.getImageUrl(this.route.snapshot.params["id"]);
   }
+
+  link(url) {
+    return "../../../assets/images/gallary/" + url;
+  }
 }

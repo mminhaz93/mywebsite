@@ -44,6 +44,7 @@ export class DashboardComponent implements OnInit {
   project: Project;
 
   id: any;
+
   menuState: string = "out";
   projectsArray: Project[];
 
@@ -88,5 +89,9 @@ export class DashboardComponent implements OnInit {
   gotData(data) {
     this.menuState = data;
     this.menuState = this.menuState === "data" ? "in" : "out";
+  }
+
+  link(url) {
+    return "../../../assets/images/project/" + url;
   }
 }
