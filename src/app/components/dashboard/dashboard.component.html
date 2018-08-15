@@ -1,6 +1,5 @@
+<app-side-bar [@slideInOut]="menuState" [project]="project" (eventClicked)="gotData($event)"></app-side-bar>
 <div class="container">
-  <app-side-bar [@slideInOut]="menuState" [project]="project" (eventClicked)="gotData($event)"></app-side-bar>
-
   <div class="row">
     <app-carousel></app-carousel>
   </div>
@@ -20,3 +19,4 @@
     </div>
   </div>
 </div>
+<br>

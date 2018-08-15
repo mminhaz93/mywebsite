@@ -1,48 +1,67 @@
-import { Component, OnInit, Output, ViewChild, ElementRef, Input } from '@angular/core';
-import { trigger, state, style, transition, animate } from '@angular/animations';
-import { ProjectService } from '../../services/projects.service';
-import { Project } from '../../model/project.model';
-import { ActivatedRoute } from '@angular/router';
-import { EventEmitter } from 'events';
+import {
+  Component,
+  OnInit,
+  Output,
+  ViewChild,
+  ElementRef,
+  Input
+} from "@angular/core";
+import {
+  trigger,
+  state,
+  style,
+  transition,
+  animate
+} from "@angular/animations";
+import { ProjectService } from "../../services/projects.service";
+import { Project } from "../../model/project.model";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css'],
+  selector: "app-dashboard",
+  templateUrl: "./dashboard.component.html",
+  styleUrls: ["./dashboard.component.css"],
   animations: [
-    trigger('slideInOut', [
-      state('in', style({
-        transform: 'translate3d(0, 0, 0)'
-      })),
-      state('out', style({
-        transform: 'translate3d(100%, 0, 0)'
-      })),
-      transition('in => out', animate('400ms ease-in-out')),
-      transition('out => in', animate('400ms ease-in-out'))
-    ]),
+    trigger("slideInOut", [
+      state(
+        "in",
+        style({
+          transform: "translate3d(0, 0, 0)"
+        })
+      ),
+      state(
+        "out",
+        style({
+          transform: "translate3d(100%, 0, 0)"
+        })
+      ),
+      transition("in => out", animate("400ms ease-in-out")),
+      transition("out => in", animate("400ms ease-in-out"))
+    ])
   ]
 })
 export class DashboardComponent implements OnInit {
   project: Project;
 
   id: any;
-  menuState: string = 'out';
+  menuState: string = "out";
   projectsArray: Project[];
 
   toggleMenu(key) {
-    // this.menuState = this.menuState === 'out' ? 'in' : 'out';
-    this.menuState = 'in';
+    this.menuState = "in";
     this.id = key;
     this.project = this.getProject(this.id);
   }
 
   // Projects
-  constructor(private projectService: ProjectService,
-    public route: ActivatedRoute) {
-  }
+  constructor(
+    private projectService: ProjectService,
+    public route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
-    this.projectService.getProjects()
+    this.projectService
+      .getProjects()
       .snapshotChanges()
       .subscribe(item => {
         //initialized to empty array
@@ -51,13 +70,14 @@ export class DashboardComponent implements OnInit {
           var x = element.payload.toJSON();
           x["$key"] = element.key;
           this.projectsArray.push(x);
-        })
+        });
       });
   }
 
   getProject(id): Project {
     // Get Client
-    this.projectService.getProject(this.id)
+    this.projectService
+      .getProject(this.id)
       .snapshotChanges()
       .subscribe(action => {
         this.project = action.payload.toJSON();
@@ -67,6 +87,6 @@ export class DashboardComponent implements OnInit {
 
   gotData(data) {
     this.menuState = data;
-    this.menuState = this.menuState === 'data' ? 'in' : 'out';
+    this.menuState = this.menuState === "data" ? "in" : "out";
   }
 }
