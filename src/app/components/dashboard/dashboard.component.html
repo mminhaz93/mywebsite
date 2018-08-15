@@ -6,7 +6,7 @@
   <div class="row">
     <div class="col-md-3 project card" *ngFor="let project of projectsArray">
       <div class="card-header project-title" [routerLink]="[project.link]" href="">
-        <span>{{project.title}}</span>
+        <span>{{project}}</span>
       </div>
       <figure>
         <img class="rounded-circle" [routerLink]="[project.link]" [src]="project.img" alt="Generic placeholder image">

@@ -9,15 +9,26 @@ import { ImageService } from "../../services/image.service";
   styleUrls: ["./gallary.component.css"]
 })
 export class GallaryComponent {
-  images: Observable<GalleryImage[]>;
+  images: GalleryImage[];
 
   constructor(private imageService: ImageService) {}
 
   ngOnInit() {
-    this.images = this.imageService.getImages();
+    this.imageService
+      .getImages()
+      .snapshotChanges()
+      .subscribe(item => {
+        //initialized to empty array
+        this.images = [];
+        item.forEach(element => {
+          var x = element.payload.toJSON();
+          x["$key"] = element.key;
+          this.images.push(x);
+        });
+      });
   }
 
   ngOnChanges() {
-    this.images = this.imageService.getImages();
+    this.imageService.getImages();
   }
 }
