@@ -9,8 +9,16 @@ ul {
 li {
   display: inline;
 }
+
 img {
   width: 100%;
   border: 4px solid #eee;
   box-shadow: #555 1px 1px 8px 1px;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
 }
