@@ -1,0 +1,64 @@
+{
+  "1": {
+    "title": "Todo List",
+    "discription": "App to manage tasks",
+    "img": "https://cdn.icon-icons.com/icons2/1154/PNG/512/1486564408-marker-red_81523.png",
+    "difficulty": 2,
+    "rate": 3,
+    "link": "/todo"
+  },
+  "2": {
+    "title": "Employee Management",
+    "discription": "App to track employees",
+    "img": "https://cdn.icon-icons.com/icons2/1154/PNG/512/1486564408-marker-red_81523.png",
+    "difficulty": 3,
+    "rate": 4,
+    "link": "/employees"
+  },
+  "3": {
+    "title": "Quotes",
+    "discription": "View famouse quotes",
+    "img": "https://cdn.icon-icons.com/icons2/1154/PNG/512/1486564408-marker-red_81523.png",
+    "difficulty": 2,
+    "rate": 1,
+    "link": "/quotes"
+  },
+  "4": {
+    "title": "Q & A",
+    "discription": "View Frequent Asked Questions",
+    "img": "https://cdn.icon-icons.com/icons2/1154/PNG/512/1486564408-marker-red_81523.png",
+    "difficulty": 2,
+    "rate": 1,
+    "link": "/qa"
+  },
+  "5": {
+    "title": "Angular Events",
+    "discription": "View upcoming angular events",
+    "img": "https://cdn.icon-icons.com/icons2/1154/PNG/512/1486564408-marker-red_81523.png",
+    "difficulty": 4,
+    "rate": 5,
+    "link": "/events"
+  },
+  "6": {
+    "title": "Charts",
+    "discription": "View Charts",
+    "img": "https://cdn.icon-icons.com/icons2/1154/PNG/512/1486564408-marker-red_81523.png",
+    "difficulty": 2,
+    "rate": 4,
+    "link": "/charts"
+  },
+  "7": {
+    "title": "Q & A",
+    "discription": "View Frequent Asked Questions",
+    "img": "https://cdn.icon-icons.com/icons2/1154/PNG/512/1486564408-marker-red_81523.png",
+    "difficulty": 2,
+    "rate": 1
+  },
+  "8": {
+    "title": "Q & A",
+    "discription": "View Frequent Asked Questions",
+    "img": "https://cdn.icon-icons.com/icons2/1154/PNG/512/1486564408-marker-red_81523.png",
+    "difficulty": 2,
+    "rate": 1
+  }
+}
